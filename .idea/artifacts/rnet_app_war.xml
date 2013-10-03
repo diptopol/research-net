@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rnet-app:war">
+    <output-path>$PROJECT_DIR$/rnet-app/target</output-path>
+    <root id="archive" name="rnet-app.war">
+      <element id="artifact" artifact-name="rnet-app:war exploded" />
+    </root>
+  </artifact>
+</component>

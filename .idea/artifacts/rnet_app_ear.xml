@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="rnet-app:ear">
+    <output-path>$PROJECT_DIR$/rnet-app/target</output-path>
+    <root id="archive" name="rnet-app.ear">
+      <element id="artifact" artifact-name="rnet-app:ear exploded" />
+    </root>
+  </artifact>
+</component>

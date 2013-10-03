@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="rnet-main:ejb">
+    <output-path>$PROJECT_DIR$/rnet-main/target</output-path>
+    <root id="archive" name="rnet.jar">
+      <element id="artifact" artifact-name="rnet-main:ejb exploded" />
+    </root>
+  </artifact>
+</component>

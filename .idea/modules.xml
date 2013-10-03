@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rnet.iml" filepath="$PROJECT_DIR$/rnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rnet-app/rnet-app.iml" filepath="$PROJECT_DIR$/rnet-app/rnet-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rnet-main/rnet-main.iml" filepath="$PROJECT_DIR$/rnet-main/rnet-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rnet-war/rnet-war.iml" filepath="$PROJECT_DIR$/rnet-war/rnet-war.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="rnet-app:war exploded">
+    <output-path>$PROJECT_DIR$/rnet-app/target/rnet-app</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="rnet-app/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="rnet-app" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

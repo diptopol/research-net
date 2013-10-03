@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/rnet-main" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/rnet-app" />
+    <file type="web" url="file://$PROJECT_DIR$/rnet-app" />
+    <file type="web" url="file://$PROJECT_DIR$/rnet-domain" />
+    <file type="web" url="file://$PROJECT_DIR$/rnet-main" />
+    <file type="web" url="file://$PROJECT_DIR$/rnet-war" />
+  </component>
+  <component name="IdProvider" IDEtalkID="380D3622E03F4888AF310BEBCE36CC43" />
+  <component name="JsfProjectComponent">
+    <option name="faceletsSupport" value="ENABLED" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/rnet-app/pom.xml" />
+        <option value="$PROJECT_DIR$/rnet-main/pom.xml" />
+        <option value="$PROJECT_DIR$/rnet-war/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/rnet-domain/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="rnet-main:ejb exploded">
+    <output-path>$PROJECT_DIR$/rnet-main/target/rnet</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="rnet-main/ejb/EJB" />
+      <element id="module-output" name="rnet-main" />
+    </root>
+  </artifact>
+</component>
