@@ -1,6 +1,7 @@
 package domain;
 
 import javax.annotation.Generated;
+import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
@@ -9,8 +10,12 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class User_ {
 
 	public static volatile SingularAttribute<User, String> username;
+	public static volatile SingularAttribute<User, Collaborator> collaborator;
 	public static volatile SingularAttribute<User, Integer> userId;
+	public static volatile ListAttribute<User, Report> reportList;
+	public static volatile SingularAttribute<User, UserInformation> userInformation;
 	public static volatile SingularAttribute<User, String> password;
+	public static volatile ListAttribute<User, Feedback> feedbackList;
 
 }
 
