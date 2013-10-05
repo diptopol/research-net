@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/4/13
+  Time: 1:06 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Simple JSF Facelets page</title>
+</h:head>
+
+<h:body>
+       <h:form>
+           <h:panelGrid columns="3" bodyrows="7">
+               #{message.registrationUsername} :<h:inputText value="#{registerAction.user.username}" id="username"
+                                                             required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
+               <h:message for="username" style="color: red" />
+               #{message.registrationName} :<h:inputText value="#{registerAction.userInformation.name}" id="name"
+                                                         required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
+               <h:message for="name" style="color: red" />
+               #{message.registrationPassword} :<h:inputSecret binding="#{registerAction.passwordComponent}" value="#{registerAction.user.password}" id="password"
+                                                               required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
+               <h:message for="password" style="color: red" />
+               #{message.registrationConfirmPassword} :<h:inputSecret id="confirmPassword"
+                                                                      required="#{not empty registerAction.passwordComponent}" requiredMessage="#{message.registrationRequiredMessage}">
+                    <f:validator validatorId="ConfirmPasswordValidator" />
+                    <f:attribute name="passwordComponent" value="#{registerAction.passwordComponent}" />
+               </h:inputSecret>
+               <h:message for="confirmPassword" style="color: red" />
+               #{message.registrationEmail} :<h:inputText value="#{registerAction.userInformation.email}" id="email"
+                                                          required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
+               <h:message for="email" style="color: red" />
+               #{message.registrationAddress} :<h:inputText value="#{registerAction.userInformation.address}" id="address"
+                                                            required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
+               <h:message for="address" style="color: red" />
+               #{message.registrationProfession} :<h:inputText value="#{registerAction.userInformation.profession}" id="profession"
+                                                               required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
+               <h:message for="profession" style="color: red" />
+            </h:panelGrid>
+           <h:commandButton value="Register" action="#{registerAction.registration}"/>
+       </h:form>
+</h:body>
+
+</html>

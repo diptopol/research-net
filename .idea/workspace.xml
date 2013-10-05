@@ -4,7 +4,7 @@
     <list default="true" id="01cc9506-4b90-49a1-b87d-29f63f4113b6" name="Default" comment="" />
     <ignored path="rnet.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/pom.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380788919717" ignored="false" />
+    <file path="/pom.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380838238169" ignored="false" />
     <file path="/fragment.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380704727635" ignored="false" />
     <file path="$PROJECT_DIR$/../tdd development/pom.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380453153397" ignored="false" />
     <file path="$PROJECT_DIR$/../tdd development/src/test/java/TestNumToStringConversion.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380453112662" ignored="false" />
@@ -13,12 +13,12 @@
     <file path="$PROJECT_DIR$/../tdd development/tdd development.iml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380453217849" ignored="false" />
     <file path="$PROJECT_DIR$/../tdd development/src/main/java/net/therap/NumberToStringConversion.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380517140248" ignored="false" />
     <file path="/NumberToStringConversion.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380517089329" ignored="false" />
-    <file path="/persistence.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380796901394" ignored="false" />
-    <file path="/UserDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380685621067" ignored="false" />
+    <file path="/persistence.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380883281367" ignored="false" />
+    <file path="/UserDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380907312948" ignored="false" />
     <file path="/User.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380819656138" ignored="false" />
     <file path="/TestUserDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380526570006" ignored="false" />
     <file path="/TestUserDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380623816510" ignored="false" />
-    <file path="/UserDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380685019461" ignored="false" />
+    <file path="/UserDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380907744408" ignored="false" />
     <file path="/Dummy.txt" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380704831109" ignored="false" />
     <file path="/arquillian.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380609732865" ignored="false" />
     <file path="/test-persistence.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380609720074" ignored="false" />
@@ -36,14 +36,14 @@
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/webapp/login.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380620183195" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/webapp/resources/templates/header.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380617867295" ignored="false" />
     <file path="/header.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380617867295" ignored="false" />
-    <file path="/login.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380696837077" ignored="false" />
-    <file path="/UserService.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380684871281" ignored="false" />
-    <file path="/UserServiceImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380687779540" ignored="false" />
+    <file path="/login.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380873637429" ignored="false" />
+    <file path="/UserService.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380983137067" ignored="false" />
+    <file path="/UserServiceImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380983680240" ignored="false" />
     <file path="/NoUserFoundException.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380685251654" ignored="false" />
     <file path="/loginAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380688478959" ignored="false" />
     <file path="$PROJECT_DIR$/rnet-main/target/generated-sources/annotations/domain/User_.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380691196187" ignored="false" />
-    <file path="/faces-config.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380695427220" ignored="false" />
-    <file path="/LoginAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380696252824" ignored="false" />
+    <file path="/faces-config.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380872637704" ignored="false" />
+    <file path="/LoginAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380880959397" ignored="false" />
     <file path="$PROJECT_DIR$/../Skeleton/pom.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380707912987" ignored="false" />
     <file path="$PROJECT_DIR$/../Skeleton/rnet-war/pom.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380707931376" ignored="false" />
     <file path="$PROJECT_DIR$/../Skeleton/.idea/workspace.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380714918347" ignored="false" />
@@ -59,6 +59,14 @@
     <file path="/ExternalCollaborator.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380820257565" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet/pom.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380788929270" ignored="false" />
     <file path="/Collaborator.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380820164834" ignored="false" />
+    <file path="/log4j.properties" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380834282101" ignored="false" />
+    <file path="/registration.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380905660210" ignored="false" />
+    <file path="/messages.properties" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380888442608" ignored="false" />
+    <file path="/DatabaseConnectionException.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380880135696" ignored="false" />
+    <file path="/RegisterAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380983202252" ignored="false" />
+    <file path="/ConfirmPasswordValidator.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380889724862" ignored="false" />
+    <file path="/UserInfoDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380907787650" ignored="false" />
+    <file path="/UserInfoDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380984233928" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,97 +127,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-app/pom.xml">
+      <file leaf-file-name="LoginAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="30" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+            <state line="52" column="47" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInformation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/UserInformation.java">
+      <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="32" selection-start="564" selection-end="613" vertical-scroll-proportion="0.0">
+            <state line="17" column="11" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/resources/META-INF/persistence.xml">
+      <file leaf-file-name="UserInfoDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserInfoDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="65" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
+            <state line="13" column="63" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/User.java">
+      <file leaf-file-name="UserInfoDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserInfoDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="63" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+            <state line="20" column="12" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Feedback.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Feedback.java">
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="19" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+            <state line="22" column="65" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="95" selection-start="511" selection-end="511" vertical-scroll-proportion="0.5511222">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="22" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/registration.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="124" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1380905460982" expanded="true" signature="831:841" placeholder="{...}" />
+                <marker date="1380905460982" expanded="true" signature="1136:1146" placeholder="{...}" />
+                <marker date="1380905460982" expanded="true" signature="1500:1510" placeholder="{...}" />
+                <marker date="1380905460982" expanded="true" signature="2058:2068" placeholder="{...}" />
+                <marker date="1380905460982" expanded="true" signature="2368:2378" placeholder="{...}" />
+                <marker date="1380905460982" expanded="true" signature="2688:2698" placeholder="{...}" />
+                <marker date="1380905460982" expanded="true" signature="3023:3033" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Milestone.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Milestone.java">
+      <file leaf-file-name="ConfirmPasswordValidator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/validators/ConfirmPasswordValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="62" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Report.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Report.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="33" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Research.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Research.java">
+      <file leaf-file-name="RegisterAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/RegisterAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="67" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collaborator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Collaborator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="49" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExternalCollaborator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/ExternalCollaborator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="57" selection-start="336" selection-end="336" vertical-scroll-proportion="0.675841">
+            <state line="64" column="37" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -227,22 +237,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/rnet-war/src/main/java/net/therap/action/LoginAction.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/collaborator.java" />
-        <option value="$PROJECT_DIR$/rnet-war/pom.xml" />
-        <option value="$PROJECT_DIR$/rnet-app/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/rnet-main/pom.xml" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/UserInformation.java" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/regestration.xhtml" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/login.xhtml" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/exceptions/DatabaseConnectionException.java" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/java/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/rnet-main/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Feedback.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Milestone.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Report.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/User.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Research.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Collaborator.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/ExternalCollaborator.java" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/resources/messages.properties" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/registration.xhtml" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/java/validators/ConfirmPasswordValidator.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/UserInfoDao.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/services/UserService.java" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/java/action/RegisterAction.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/services/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/UserInfoDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -258,6 +268,25 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>JPA issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JpaQlInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -287,7 +316,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -386,6 +414,36 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="research-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -413,12 +471,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,15 +500,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-main\src\main\resources" />
       <recent name="$PROJECT_DIR$/rnet-war/src/main/resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rnet-main/src/test/resources-glassfish-embedded" />
-      <recent name="$PROJECT_DIR$/rnet-main/src/test/resource/META-INF" />
-      <recent name="$PROJECT_DIR$/rnet-war/src/main/webapp/WEB-INF" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-app\src\main\resources" />
+      <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-main\src\main\resources" />
+      <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-war\src\main\resources" />
+      <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-app\APP-INF" />
+      <recent name="$PROJECT_DIR$/rnet-main/src/test/resources-glassfish-embedded" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.Deploy">
@@ -670,14 +732,14 @@
       <window_info id="EJB" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075758" sideWeight="0.63931626" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36068377" sideWeight="0.5449102" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075758" sideWeight="0.765812" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23418804" sideWeight="0.5449102" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32934132" sideWeight="0.67007965" order="3" side_tool="false" content_ui="tabs" x="68" y="588" width="1017" height="829" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.49957228" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.49957228" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34015927" sideWeight="0.49957228" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -747,119 +809,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rnet-war/pom.xml">
+    <entry file="file://$PROJECT_DIR$/rnet-app/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="72" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.0">
+        <state line="5" column="43" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/exceptions/NoUserFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/exceptions/DatabaseConnectionException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="19" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="35" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.009578544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="9" selection-start="419" selection-end="419" vertical-scroll-proportion="0.43103448" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="44" selection-start="361" selection-end="361" vertical-scroll-proportion="0.44117647" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-app/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+        <state line="9" column="41" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rnet-main/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="65" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
+        <state line="15" column="69" selection-start="958" selection-end="958" vertical-scroll-proportion="0.70247936" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="56" selection-start="821" selection-end="839" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Feedback.java">
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/resources/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+        <state line="15" column="80" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/validators/ConfirmPasswordValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/registration.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="124" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1380905460982" expanded="true" signature="831:841" placeholder="{...}" />
+            <marker date="1380905460982" expanded="true" signature="1136:1146" placeholder="{...}" />
+            <marker date="1380905460982" expanded="true" signature="1500:1510" placeholder="{...}" />
+            <marker date="1380905460982" expanded="true" signature="2058:2068" placeholder="{...}" />
+            <marker date="1380905460982" expanded="true" signature="2368:2378" placeholder="{...}" />
+            <marker date="1380905460982" expanded="true" signature="2688:2698" placeholder="{...}" />
+            <marker date="1380905460982" expanded="true" signature="3023:3033" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="47" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/RegisterAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="37" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Milestone.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="62" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="33" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+        <state line="43" column="22" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/User.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserInfoDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="63" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+        <state line="20" column="12" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Research.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserInfoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="67" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0">
+        <state line="13" column="63" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/UserInformation.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="32" selection-start="564" selection-end="613" vertical-scroll-proportion="0.0">
+        <state line="22" column="65" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/Collaborator.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="17" column="11" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/domain/ExternalCollaborator.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="57" selection-start="336" selection-end="336" vertical-scroll-proportion="0.675841">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="16" column="95" selection-start="511" selection-end="511" vertical-scroll-proportion="0.5511222">
+          <folding />
         </state>
       </provider>
     </entry>

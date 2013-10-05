@@ -22,4 +22,27 @@ public class ExternalCollaborator implements Serializable{
     @Column(name = "email")
     private String email;
 
+    public Research getResearch() {
+        return research;
+    }
+
+    public void setResearch(Research research) {
+        this.research = research;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

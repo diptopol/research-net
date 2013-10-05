@@ -17,10 +17,19 @@
 </h:head>
 
 <h:body>
-    <h:form >
-        <h:commandButton action="#{loginAction.login}" value="login"/>
-        <h:outputText value="#{loginAction.user.userId}"/>
+
+    <h:form id="form">
+        <h:outputText value="#{message.loginNoUserError}" rendered="#{param['error'] eq 'no_user'}" />
+        <h:panelGrid columns="3" bodyrows="2">
+            #{message.loginUsername} : <h:inputText value="#{loginAction.user.username}" id="username" required="true" requiredMessage="#{message.loginUsernameValidationMessage}"/>
+            <h:message for="username" style="color: red" />
+            #{message.loginPassword} : <h:inputSecret value="#{loginAction.user.password}" id="password" required="true" requiredMessage="#{message.loginPasswordValidationMessage}"/>
+            <h:message for="password" style="color: red" />
+        </h:panelGrid>
+        <h:commandButton action="#{loginAction.login()}" value="Submit" />
     </h:form>
+    #{message.loginRegisterMessage} <h:link value="#{message.loginRegisterLink}" outcome="registration"/>
+
 
 </h:body>
 

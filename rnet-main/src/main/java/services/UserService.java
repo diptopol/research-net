@@ -1,6 +1,8 @@
 package services;
 
 import domain.User;
+import domain.UserInformation;
+import exceptions.DatabaseConnectionException;
 import exceptions.NoUserFoundException;
 
 /**
@@ -12,4 +14,5 @@ import exceptions.NoUserFoundException;
  */
 public interface UserService {
     public User getValidUserBy(User user) throws NoUserFoundException;
+    public void addNewUser(User user, UserInformation information) throws NoUserFoundException;
 }

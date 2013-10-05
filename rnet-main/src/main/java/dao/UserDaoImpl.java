@@ -1,10 +1,14 @@
 package dao;
 
 import domain.User;
+import exceptions.DatabaseConnectionException;
+import exceptions.NoUserFoundException;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,11 +24,25 @@ public class UserDaoImpl implements UserDao{
     private EntityManager entityManager;
 
     @Override
-    public User getUserBy(User user) {
-        return (User) entityManager.createQuery("SELECT user FROM User user WHERE user.username =:username " +
-                "AND user.password =:password").
-                setParameter("username", user.getUsername()).
-                setParameter("password", user.getPassword()).
-                getSingleResult();
+    public User getUserBy(User user) throws NoUserFoundException{
+        User validUser = null;
+        try {
+            validUser = (User) entityManager.createQuery("SELECT user FROM User user WHERE user.username =:username " +
+                    "AND user.password =:password").
+                    setParameter("username", user.getUsername()).
+                    setParameter("password", user.getPassword()).
+                    getSingleResult();
+        }
+        catch (NoResultException noResult) {
+        }
+        if(user == null) {
+            throw new NoUserFoundException();
+        }
+        return validUser;
+    }
+
+    @Override
+    public void insert(User user) {
+        entityManager.persist(user);
     }
 }

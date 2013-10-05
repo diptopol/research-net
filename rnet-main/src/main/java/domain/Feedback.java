@@ -23,6 +23,47 @@ public class Feedback {
     private Byte[] feedbackData;
     @ManyToOne(targetEntity = Report.class)
     private Report report;
+
+    public int getFeedbackId() {
+        return feedbackId;
+    }
+
+    public void setFeedbackId(int feedbackId) {
+        this.feedbackId = feedbackId;
+    }
+
+    public Date getFeedbackTime() {
+        return feedbackTime;
+    }
+
+    public void setFeedbackTime(Date feedbackTime) {
+        this.feedbackTime = feedbackTime;
+    }
+
+    public Byte[] getFeedbackData() {
+        return feedbackData;
+    }
+
+    public void setFeedbackData(Byte[] feedbackData) {
+        this.feedbackData = feedbackData;
+    }
+
+    public Report getReport() {
+        return report;
+    }
+
+    public void setReport(Report report) {
+        this.report = report;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @ManyToOne(targetEntity = User.class)
     private User user;
 

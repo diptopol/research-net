@@ -28,6 +28,63 @@ public class Report {
     private User user;
     @ManyToOne(targetEntity = Milestone.class)
     private Milestone milestone;
+
+    public List<Feedback> getFeedbackList() {
+        return feedbackList;
+    }
+
+    public void setFeedbackList(List<Feedback> feedbackList) {
+        this.feedbackList = feedbackList;
+    }
+
+    public Milestone getMilestone() {
+        return milestone;
+    }
+
+    public void setMilestone(Milestone milestone) {
+        this.milestone = milestone;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public byte[] getReportData() {
+        return reportData;
+    }
+
+    public void setReportData(byte[] reportData) {
+        this.reportData = reportData;
+    }
+
+    public Date getReportingTime() {
+        return reportingTime;
+    }
+
+    public void setReportingTime(Date reportingTime) {
+        this.reportingTime = reportingTime;
+    }
+
+    public String getReportStatus() {
+        return reportStatus;
+    }
+
+    public void setReportStatus(String reportStatus) {
+        this.reportStatus = reportStatus;
+    }
+
+    public int getReportId() {
+        return reportId;
+    }
+
+    public void setReportId(int reportId) {
+        this.reportId = reportId;
+    }
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "report")
     private List<Feedback> feedbackList;
 }
