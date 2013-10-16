@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/16/13
+  Time: 9:34 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+    <ui:composition template="structureLayout.xhtml" >
+        <ui:define name="content" >
+            <div id="left_sidebar">
+                <div class="left_menu_item" >
+                    <h4><a href="">Create Research Project</a></h4>
+                </div>
+                <div class="left_menu_item" >
+                    <h4><a href="">Profile</a></h4>
+                </div>
+                <div class="left_menu_item" >
+                    <h4><a href="">Current Works</a></h4>
+                </div>
+            </div>
+            <div id="middle_content">
+                <ui:insert name="middle_content">
+                    <ui:include src="content.xhtml" />
+                </ui:insert>
+            </div>
+            <div class="clear-both"></div>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+
+</html>

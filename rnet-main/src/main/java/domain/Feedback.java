@@ -1,6 +1,7 @@
 package domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,10 +13,10 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "feedback")
-public class Feedback {
+public class Feedback implements Serializable{
     @Id @GeneratedValue
     @Column(name = "feedback_id")
-    private int feedbackId;
+    private Integer feedbackId;
     @Column(name = "feedback_time")
     private Date feedbackTime;
     @Lob

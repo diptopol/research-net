@@ -4,6 +4,7 @@ import domain.User;
 import exceptions.DatabaseConnectionException;
 import exceptions.NoUserFoundException;
 
+import javax.ejb.Local;
 import javax.persistence.NoResultException;
 
 /**
@@ -13,8 +14,8 @@ import javax.persistence.NoResultException;
  * Time: 11:57 AM
  * To change this template use File | Settings | File Templates.
  */
+@Local
 public interface UserDao {
     public User getUserBy(User user) throws NoUserFoundException;
     public void insert(User user);
-
 }

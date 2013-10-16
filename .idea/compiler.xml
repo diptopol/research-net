@@ -30,6 +30,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="rnet" target="1.6" />
+      <module name="rnet-app" target="1.6" />
       <module name="rnet-main" target="1.6" />
       <module name="rnet-war" target="1.6" />
     </bytecodeTargetLevel>

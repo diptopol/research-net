@@ -10,13 +10,13 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
-
-<h:head>
-    <title>Simple JSF Facelets page</title>
-</h:head>
-
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
+
+    <ui:composition template="resources/templates/structureLayout.xhtml" >
+    <ui:define name="content" >
        <h:form>
            <h:panelGrid columns="3" bodyrows="7">
                #{message.registrationUsername} :<h:inputText value="#{registerAction.user.username}" id="username"
@@ -44,8 +44,10 @@
                                                                required="true" requiredMessage="#{message.registrationRequiredMessage}"/>
                <h:message for="profession" style="color: red" />
             </h:panelGrid>
-           <h:commandButton value="Register" action="#{registerAction.registration}"/>
+           <h:commandButton value="#{message.registrationButton}" action="#{registerAction.registration}"/>
        </h:form>
+    </ui:define>
+    </ui:composition>
 </h:body>
 
 </html>

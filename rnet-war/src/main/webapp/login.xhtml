@@ -10,27 +10,36 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
-
-<h:head>
-    <title>Simple JSF Facelets page</title>
-</h:head>
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:body>
 
-    <h:form id="form">
-        <h:outputText value="#{message.loginNoUserError}" rendered="#{param['error'] eq 'no_user'}" />
-        <h:panelGrid columns="3" bodyrows="2">
-            #{message.loginUsername} : <h:inputText value="#{loginAction.user.username}" id="username" required="true" requiredMessage="#{message.loginUsernameValidationMessage}"/>
-            <h:message for="username" style="color: red" />
-            #{message.loginPassword} : <h:inputSecret value="#{loginAction.user.password}" id="password" required="true" requiredMessage="#{message.loginPasswordValidationMessage}"/>
-            <h:message for="password" style="color: red" />
-        </h:panelGrid>
-        <h:commandButton action="#{loginAction.login()}" value="Submit" />
+    <ui:composition template="resources/templates/structureLayout.xhtml" >
+    <ui:define name="content" >
+
+    <h:form id="loginform">
+        <fieldset id="loginFieldset">
+            <legend>#{message.loginFieldSetName}</legend>
+            <h:outputText value="#{message.loginNoUserError}" rendered="#{param['error'] eq 'no_user'}" />
+            <h:panelGrid columns="3" bodyrows="2">
+                #{message.loginUsername} : <h:inputText value="#{loginAction.user.username}" id="username" required="true" requiredMessage="#{message.loginUsernameValidationMessage}"/>
+                <h:message for="username" style="color: red" />
+                #{message.loginPassword} : <h:inputSecret value="#{loginAction.user.password}" id="password" required="true" requiredMessage="#{message.loginPasswordValidationMessage}"/>
+                <h:message for="password" style="color: red" />
+            </h:panelGrid>
+            <h:commandButton id="loginButton" action="#{loginAction.login()}" value="#{message.loginButton}" />
+            <div id="loginSignupLink">
+                #{message.loginRegisterMessage} <h:link value="#{message.loginRegisterLink}" outcome="registration"/>
+            </div>
+
+        </fieldset>
     </h:form>
-    #{message.loginRegisterMessage} <h:link value="#{message.loginRegisterLink}" outcome="registration"/>
 
-
+    </ui:define>
+    </ui:composition>
 </h:body>
+
+
 
 </html>

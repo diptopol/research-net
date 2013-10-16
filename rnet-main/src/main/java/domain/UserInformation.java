@@ -26,7 +26,7 @@ public class UserInformation implements Serializable{
     private String profession;
 
     @Id
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
 

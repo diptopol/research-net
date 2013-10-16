@@ -1,14 +1,14 @@
 package dao;
 
 import domain.User;
-import exceptions.DatabaseConnectionException;
 import exceptions.NoUserFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceException;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,26 +19,31 @@ import javax.persistence.PersistenceException;
  */
 @Stateless
 public class UserDaoImpl implements UserDao{
+    private static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
 
     @PersistenceContext(unitName = "persistDB")
     private EntityManager entityManager;
 
     @Override
     public User getUserBy(User user) throws NoUserFoundException{
-        User validUser = null;
-        try {
-            validUser = (User) entityManager.createQuery("SELECT user FROM User user WHERE user.username =:username " +
-                    "AND user.password =:password").
-                    setParameter("username", user.getUsername()).
-                    setParameter("password", user.getPassword()).
-                    getSingleResult();
-        }
-        catch (NoResultException noResult) {
-        }
-        if(user == null) {
+       logger.info("UserDaoImpl :"+user.getUsername());
+
+        List<User>validUsers = (List<User>) entityManager.createQuery("SELECT user FROM User user WHERE user.username =:username " +
+                "AND user.password =:password").
+                setParameter("username", user.getUsername()).
+                setParameter("password", user.getPassword()).
+                getResultList();
+
+        if(validUsers.isEmpty()) {
+            logger.info("UserDaoImpl :empty");
             throw new NoUserFoundException();
         }
-        return validUser;
+        else {
+            return validUsers.get(0);
+        }
+
+
+
     }
 
     @Override

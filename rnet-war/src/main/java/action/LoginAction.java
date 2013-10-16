@@ -23,11 +23,10 @@ import java.io.Serializable;
 @Named
 @SessionScoped
 public class LoginAction implements Serializable{
-    Logger logger = LoggerFactory.getLogger(LoginAction.class);
-
+    private static final Logger logger = LoggerFactory.getLogger(LoginAction.class);
     @EJB
     private UserService userService;
-    private User user;
+    private User user = null;
 
     public User getUser() {
         return user;
@@ -45,20 +44,13 @@ public class LoginAction implements Serializable{
     }
 
     public String login() {
-        logger.info("login class");
         try {
+            logger.info("login :"+user.getUsername());
             user = userService.getValidUserBy(user);
+            return "createResearchProject.xhtml?faces-redirect=true";
         }
         catch (NoUserFoundException noUser) {
-            return "login.xhtml?error=no_user";
+            return "login.xhtml?error=no_user&faces-redirect=true";
         }
-        return "login";
     }
-
-
-
-
-
-
-
 }

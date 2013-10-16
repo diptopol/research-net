@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/7/13
+  Time: 10:18 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content">
+            <h:form id="menuform">
+                <p:tabMenu activeIndex="0">
+                    <p:menuitem value="OverView" action="#{showResearchProjectAction.goResearchProjectOverview()}"/>
+                    <p:menuitem value="Workboard" />
+                    <p:menuitem value="Milestone" action="#{showResearchProjectAction.goMilestoneView}"/>
+                    <p:menuitem value="Journal Paper" outcome="showJournalPaper.xhtml"/>
+                    <p:menuitem value="Resources" outcome="showResources.xhtml"/>
+                </p:tabMenu>
+            </h:form>
+            <p:panelGrid id="researchDiv">
+                <p:row>
+                        <p:column colspan="20">
+                            #{message.researchProjectTitle}
+                        </p:column>
+                        <p:column>
+                            #{showResearchProjectAction.research.researchTitle}
+                        </p:column>
+                </p:row>
+                <p:row>
+                    <p:column colspan="20">
+                        #{message.researchProjectProposal}
+                    </p:column>
+                    <p:column>
+                        <h:outputText value="#{showResearchProjectAction.research.researchData}">
+                            <f:converter converterId="StringToBytesConverter"/>
+                        </h:outputText>
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column colspan="20">
+                        #{message.researchProjectStartingDate}
+                    </p:column>
+                    <p:column>
+                        #{showResearchProjectAction.research.startingTime}
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column colspan="20">
+                        #{message.researchProjectCollaborators} :
+                    </p:column>
+                    <p:column>
+                        <ui:repeat value="#{showResearchProjectAction.collaboratorNameList}" var="name" varStatus="loop">
+                            #{name}#{not loop.last ? ', ' : ''}
+                        </ui:repeat>
+                    </p:column>
+                </p:row>
+                <p:row rendered="#{showResearchProjectAction.visible}">
+                        <p:column colspan="20"></p:column>
+                        <p:column>
+                            <h:button value="#{message.researchProjectJoinMessage}" />
+                        </p:column>
+                </p:row>
+            </p:panelGrid>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+
+</html>

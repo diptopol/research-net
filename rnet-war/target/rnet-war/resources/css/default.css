@@ -1,0 +1,109 @@
+body {
+    font-weight: normal;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+#header {
+    position: relative;
+    width: 100%;
+    height:100px;
+    background-color: lavender;
+    border: 1px solid deepskyblue;
+}
+#header h2 {
+    color: white;
+    font-family: fantasy;
+    margin-bottom: -3px;
+}
+
+#left_sidebar {
+    float:left;
+    width:19%;
+    background:#FFF;
+}
+
+#middle_content {
+    float: right;
+    width: 80%;
+    height: auto;
+}
+
+.clear-both {
+    clear: both;
+}
+
+
+.left_menu_item h4{
+    padding:5px 0;
+    font: 16px Verdana, Geneva, sans-serif;
+    -moz-transition:background 0.3s linear 0s;
+    text-align:center;
+    border: 1px solid #000;
+
+}
+
+.left_menu_item h4 a {
+    color: black;
+}
+
+.left_menu_item h4:hover {
+    background: #45484d;
+}
+.left_menu_item h4:hover a{
+    color: #fff;
+}
+
+#loginFieldset {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginform\:loginButton {
+    float: right;
+    margin-right: 10%;
+}
+
+#loginSignupLink {
+    margin-top: 10%;
+    text-align: center;
+}
+
+#researchform {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#milestoneform {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#researchDiv {
+    width: 40%;
+}
+
+.ui-panelgrid tr, .ui-panelgrid td {
+    border-style: none !important;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0;
+    background-color: lavender;
+    border: 1px solid deepskyblue;
+}
+
+#content {
+    width: 100%;
+    padding-top: 10px;
+    min-height: 500px;
+    height:auto;
+    position:relative;
+    color: #000000;
+}

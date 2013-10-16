@@ -13,17 +13,27 @@ import java.io.Serializable;
 @Entity
 @Table(name = "collaborator")
 public class Collaborator implements Serializable{
+    @Id @GeneratedValue
+    @Column(name = "collaborator_id")
+    private Integer collaboratorId;
     @Column(name = "role")
     private String role;
-    @Id
-    @OneToOne
+
+    @ManyToOne
     @JoinColumn(name="research_id")
     private Research research;
-    @Id
-    @OneToOne
+
+    @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
 
+    public int getCollaboratorId() {
+        return collaboratorId;
+    }
+
+    public void setCollaboratorId(int collaboratorId) {
+        this.collaboratorId = collaboratorId;
+    }
 
     public String getRole() {
         return role;

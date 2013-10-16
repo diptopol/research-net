@@ -12,4 +12,5 @@ import domain.UserInformation;
  */
 public interface UserInfoDao {
     public void insert(User user, UserInformation information);
+    public String findUserFullNameBy(int user_id);
 }

@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
 
     <persistence-unit name="persistDB" transaction-type="JTA">
         <description>RNet Main</description>
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
         <jta-data-source>jdbc/rnet</jta-data-source>
+
         <class>domain.User</class>
         <class>domain.UserInformation</class>
         <class>domain.Report</class>
+        <class>domain.Collaborator</class>
+        <class>domain.Research</class>
+        <class>domain.ExternalCollaborator</class>
+        <class>domain.Feedback</class>
+        <class>domain.Milestone</class>
+
         <properties>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

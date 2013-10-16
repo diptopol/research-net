@@ -18,7 +18,7 @@ public class User implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="user_id")
-    private int userId;
+    private Integer userId;
 
     @Column(name = "username")
     private String username;
@@ -26,17 +26,25 @@ public class User implements Serializable{
     @Column(name = "password")
     private String password;
 
-    @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "user")
+    @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "user", fetch = FetchType.LAZY)
     private UserInformation userInformation;
 
-    @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "user")
-    private Collaborator collaborator;
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "user", fetch = FetchType.LAZY)
+    private List<Collaborator> collaboratorList;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Report> reportList;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Feedback> feedbackList;
+
+    public List<Collaborator> getCollaboratorList() {
+        return collaboratorList;
+    }
+
+    public void setCollaboratorList(List<Collaborator> collaboratorList) {
+        this.collaboratorList = collaboratorList;
+    }
 
     public List<Feedback> getFeedbackList() {
         return feedbackList;

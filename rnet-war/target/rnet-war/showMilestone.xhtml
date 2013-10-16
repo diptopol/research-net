@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/8/13
+  Time: 1:04 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+    <ui:define name="middle_content" >
+        <h:form id="menuform">
+            <p:tabMenu activeIndex="2">
+                <p:menuitem value="#{message.menuOverview}" action="#{showResearchProjectAction.goResearchProjectOverview()}"/>
+                <p:menuitem value="#{message.menuWorkboard}" />
+                <p:menuitem value="#{message.menuMilestone}" action="#{showResearchProjectAction.goMilestoneView}"/>
+                <p:menuitem value="#{message.menuJournalPaper}" outcome="showJournalPaper.xhtml"/>
+                <p:menuitem value="#{message.menuResources}" outcome="showResources.xhtml"/>
+            </p:tabMenu>
+            <h:commandButton value="#{message.milestoneAddButton}" />
+        </h:form>
+        <h:form>
+            <p:dataTable var="milestone" value="#{showMilestoneAction.showMilestoneList}" rendered="#{not empty showMilestoneAction.showMilestoneList}">
+                <p:column headerText="#{message.milestoneSequence}">
+                    <h:outputText value="#{milestone.sequence}"/>
+                </p:column>
+                <p:column headerText="#{message.milestoneDescription}">
+                    <h:outputText value="#{milestone.description}"/>
+                </p:column>
+                <p:column headerText="#{message.milestoneStatus}">
+                    <h:outputText value="#{milestone.milestoneStatus}"/>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

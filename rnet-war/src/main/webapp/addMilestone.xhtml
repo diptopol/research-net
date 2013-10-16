@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/8/13
+  Time: 2:47 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content" >
+            <h:form id="milestoneform">
+                <ui:repeat var="milestone" value="#{addMilestoneAction.milestoneList}" >
+                    <p:panelGrid>
+                        <f:facet name="header">
+                            <p:row>
+                                <p:column colspan="6"> #{message.milestoneSequence}: #{milestone.sequence}</p:column>
+                            </p:row>
+                        </f:facet>
+                        <p:row>
+                            <p:column>
+                                <h:outputLabel  value="#{message.milestoneDescription}" />
+                            </p:column>
+                            <p:column>
+                                <h:inputTextarea value="#{milestone.description}" cols="40"/>
+                            </p:column>
+                        </p:row>
+                    </p:panelGrid>
+                </ui:repeat>
+                <h:commandButton value="#{message.save}" action="#{addMilestoneAction.addMilestone}">
+                    <f:param name="research_id" value="#{addMilestoneAction.researchId}" />
+                </h:commandButton>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>
