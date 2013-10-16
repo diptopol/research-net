@@ -12,22 +12,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
 <h:body>
     <ui:composition template="resources/templates/tabbedView.xhtml" >
     <ui:define name="middle_content" >
         <h:form id="menuform">
             <p:tabMenu activeIndex="2">
-                <p:menuitem value="#{message.menuOverview}" action="#{showResearchProjectAction.goResearchProjectOverview()}"/>
+                <p:menuitem value="#{message.menuOverview}" outcome="showResearchProject.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                 <p:menuitem value="#{message.menuWorkboard}" />
-                <p:menuitem value="#{message.menuMilestone}" action="#{showResearchProjectAction.goMilestoneView}"/>
+                <p:menuitem value="#{message.menuMilestone}" outcome="showMilestone.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                 <p:menuitem value="#{message.menuJournalPaper}" outcome="showJournalPaper.xhtml"/>
                 <p:menuitem value="#{message.menuResources}" outcome="showResources.xhtml"/>
             </p:tabMenu>
-            <h:commandButton value="#{message.milestoneAddButton}" />
+            <h:commandButton value="#{message.milestoneAddButton}" action="addMilestone">
+                <f:param name="research_id" value="#{showMilestoneAction.researchId}" />
+            </h:commandButton>
         </h:form>
         <h:form>
-            <p:dataTable var="milestone" value="#{showMilestoneAction.showMilestoneList}" rendered="#{not empty showMilestoneAction.showMilestoneList}">
+            <p:dataTable var="milestone" value="#{showMilestoneAction.milestoneList}" rendered="#{! empty showMilestoneAction.milestoneList}">
                 <p:column headerText="#{message.milestoneSequence}">
                     <h:outputText value="#{milestone.sequence}"/>
                 </p:column>
@@ -39,6 +41,7 @@
                 </p:column>
             </p:dataTable>
         </h:form>
+        <h:outputText rendered="#{empty showMilestoneAction.milestoneList}" value="#{message.noData}" />
     </ui:define>
     </ui:composition>
 </h:body>

@@ -26,19 +26,42 @@ public class ShowMilestoneAction {
     private static final Logger logger = LoggerFactory.getLogger(ShowMilestoneAction.class);
     private int researchId;
     private FacesContext facesContext;
+    private List<Milestone> milestoneList;
     @EJB
     private MilestoneService milestoneService;
+
+    public int getResearchId() {
+        return researchId;
+    }
+
+    public void setResearchId(int researchId) {
+        this.researchId = researchId;
+    }
+
+    public List<Milestone> getMilestoneList() {
+        milestoneList =  milestoneService.findMilestoneListBy(researchId);
+        return milestoneList;
+    }
+
+    public void setMilestoneList(List<Milestone> milestoneList) {
+        this.milestoneList = milestoneList;
+    }
 
     @PostConstruct
     private void startUp() {
         facesContext = FacesContext.getCurrentInstance();
         Map<String,String> parameterMap = facesContext.getExternalContext().getRequestParameterMap();
-        researchId = Integer.parseInt(parameterMap.get("research_id"));
+        if(parameterMap.containsKey("research_id"))
+            researchId = Integer.parseInt(parameterMap.get("research_id"));
     }
 
-    public List<Milestone> showMilestoneList() {
-      return milestoneService.findMilestoneListBy(researchId);
+    public String addMilestone() {
+        return "addMilestone.xhtml?research_id="+researchId+"&faces-redirect=true";
     }
+
+
+
+
 
 
 

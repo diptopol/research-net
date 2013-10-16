@@ -20,14 +20,15 @@
         <ui:define name="middle_content">
             <h:form id="menuform">
                 <p:tabMenu activeIndex="0">
-                    <p:menuitem value="OverView" action="#{showResearchProjectAction.goResearchProjectOverview()}"/>
+                    <p:menuitem value="OverView" outcome="showResearchProject.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                     <p:menuitem value="Workboard" />
-                    <p:menuitem value="Milestone" action="#{showResearchProjectAction.goMilestoneView}"/>
+                    <p:menuitem value="Milestone" outcome="showMilestone.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                     <p:menuitem value="Journal Paper" outcome="showJournalPaper.xhtml"/>
                     <p:menuitem value="Resources" outcome="showResources.xhtml"/>
                 </p:tabMenu>
             </h:form>
-            <p:panelGrid id="researchDiv">
+            <h:outputText value="#{message.noData}" rendered="#{showResearchProjectAction.research eq null}" />
+            <p:panelGrid id="researchDiv" rendered="#{showResearchProjectAction.research != null}">
                 <p:row>
                         <p:column colspan="20">
                             #{message.researchProjectTitle}
