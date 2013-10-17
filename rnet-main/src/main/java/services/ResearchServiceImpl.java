@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,5 +40,9 @@ public class ResearchServiceImpl implements ResearchService{
 
     public Research findResearchBy(int research_id) {
          return researchDao.findResearchBy(research_id);
+    }
+
+    public List<Research> findResearchList(int page_number) {
+        return researchDao.findResearchList(page_number);
     }
 }

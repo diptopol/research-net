@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01cc9506-4b90-49a1-b87d-29f63f4113b6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rnet-main/src/main/java/utils/Paginator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchFeedAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchFeed.xhtml" />
       <change type="DELETED" beforePath="C:\Users\diptopol\IdeaProjects\research-net\.idea\libraries\Maven__antlr_antlr_2_7_6.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\diptopol\IdeaProjects\research-net\.idea\libraries\Maven__asm_asm_3_1.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\diptopol\IdeaProjects\research-net\.idea\libraries\Maven__cglib_cglib_2_2.xml" afterPath="" />
@@ -43,10 +46,14 @@
       <change type="DELETED" beforePath="C:\Users\diptopol\IdeaProjects\research-net\rnet-war\src\main\java\net\therap\action\LoginAction.java" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\diptopol\IdeaProjects\research-net\rnet-war\src\main\resources\log4j.properties" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-main/target/rnet-main.jar" afterPath="$PROJECT_DIR$/rnet-main/target/rnet-main.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-war/src/main/java/action/ShowMilestoneAction.java" afterPath="$PROJECT_DIR$/rnet-war/src/main/java/action/ShowMilestoneAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-war/src/main/resources/messages.properties" afterPath="$PROJECT_DIR$/rnet-war/src/main/resources/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-main/src/main/java/utils/ConstantValues.java" afterPath="$PROJECT_DIR$/rnet-main/src/main/java/utils/ConstantValues.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDao.java" afterPath="$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDaoImpl.java" afterPath="$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchService.java" afterPath="$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchServiceImpl.java" afterPath="$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css" afterPath="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml" afterPath="$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchProject.xhtml" afterPath="$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchProject.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/tabbedView.xhtml" afterPath="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/tabbedView.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rnet.iws" />
@@ -66,7 +73,7 @@
     <file path="/TestUserDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380526570006" ignored="false" />
     <file path="/TestUserDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380623816510" ignored="false" />
     <file path="/UserDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381204201136" ignored="false" />
-    <file path="/Dummy.txt" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381954662882" ignored="false" />
+    <file path="/Dummy.txt" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381981804393" ignored="false" />
     <file path="/arquillian.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380609732865" ignored="false" />
     <file path="/test-persistence.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380609720074" ignored="false" />
     <file path="/glassfish-resources.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380609707714" ignored="false" />
@@ -78,7 +85,7 @@
     <file path="/web.xml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380611937473" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/java/net/therap/rnet/Login.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380612086003" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/webapp/resources/css/default.css" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380620053751" ignored="false" />
-    <file path="/default.css" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381951847089" ignored="false" />
+    <file path="/default.css" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381996121254" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/webapp/login.xhtml.jsp" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380616842536" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/webapp/login.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380620183195" ignored="false" />
     <file path="$PROJECT_DIR$/../rnet-gui/src/main/webapp/resources/templates/header.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1380617867295" ignored="false" />
@@ -118,10 +125,10 @@
     <file path="/createResearchProjectAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381032703054" ignored="false" />
     <file path="/StringToBytesConverter.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381952798204" ignored="false" />
     <file path="/CreateResearchProjectAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381909977505" ignored="false" />
-    <file path="/ResearchServiceImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381167023469" ignored="false" />
+    <file path="/ResearchServiceImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381985737387" ignored="false" />
     <file path="/ResearchService.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381162396415" ignored="false" />
     <file path="/ResearchDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381166972768" ignored="false" />
-    <file path="/ResearchDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381166920663" ignored="false" />
+    <file path="/ResearchDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381985590864" ignored="false" />
     <file path="/CollaboratorDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381162142049" ignored="false" />
     <file path="/CollaboratorDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381208452686" ignored="false" />
     <file path="$PROJECT_DIR$/rnet-main/target/generated-sources/annotations/domain/ExternalCollaborator_.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381215115065" ignored="false" />
@@ -136,7 +143,7 @@
     <file path="/CollaboratorServiceImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381170677144" ignored="false" />
     <file path="/a.dummy" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381204074077" ignored="false" />
     <file path="/Utils.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381212096034" ignored="false" />
-    <file path="/showMilestone.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381958506041" ignored="false" />
+    <file path="/showMilestone.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381982350649" ignored="false" />
     <file path="/ShowMilestoneAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381957863496" ignored="false" />
     <file path="/MilestoneDaoImpl.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381936675229" ignored="false" />
     <file path="/MilestoneService.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381220437290" ignored="false" />
@@ -144,11 +151,14 @@
     <file path="/AddMilestone.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381223608259" ignored="false" />
     <file path="/AddMilestoneAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381951640138" ignored="false" />
     <file path="/addMilestone.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381951895374" ignored="false" />
-    <file path="/ConstantValues.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381917412919" ignored="false" />
+    <file path="/ConstantValues.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381984209022" ignored="false" />
     <file path="/persistDB" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381298700474" ignored="false" />
     <file path="/MilestoneDao.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381300806035" ignored="false" />
     <file path="/GenerateMilestoneAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381910429861" ignored="false" />
-    <file path="/tabbedView.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381947233068" ignored="false" />
+    <file path="/tabbedView.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381960214334" ignored="false" />
+    <file path="/showResearchFeed.xhtml" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381996157796" ignored="false" />
+    <file path="/ShowResearchFeedAction.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381994649116" ignored="false" />
+    <file path="/Paginator.java" changelist="01cc9506-4b90-49a1-b87d-29f63f4113b6" time="1381992194043" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,46 +219,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addMilestone.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/addMilestone.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="21" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddMilestoneAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/AddMilestoneAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="40" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="default.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="23" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
+            <state line="69" column="2" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showResearchProject.xhtml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showResearchFeed.xhtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchFeed.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="38" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.9078591">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowResearchFeedAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchFeedAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="5" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Paginator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/utils/Paginator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="16" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showResearchProject.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchProject.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="111" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.40052357">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowResearchProjectAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchProjectAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="41" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
+            <state line="19" column="48" selection-start="504" selection-end="611" vertical-scroll-proportion="-4.576923">
               <folding />
             </state>
           </provider>
@@ -257,7 +269,7 @@
       <file leaf-file-name="ResearchServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="39" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0">
+            <state line="44" column="63" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -266,7 +278,7 @@
       <file leaf-file-name="ResearchDaoImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="54" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
+            <state line="57" column="64" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -275,25 +287,25 @@
       <file leaf-file-name="showMilestone.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="70" selection-start="950" selection-end="1015" vertical-scroll-proportion="-8.5">
+            <state line="29" column="34" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-8.230769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowMilestoneAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowMilestoneAction.java">
+      <file leaf-file-name="ResearchDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="1" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0">
+            <state line="18" column="60" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/LoginAction.java">
+      <file leaf-file-name="ConstantValues.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/utils/ConstantValues.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="67" selection-start="1213" selection-end="1232" vertical-scroll-proportion="0.0">
+            <state line="11" column="29" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -317,22 +329,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Milestone.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/domain/Research.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/services/MilestoneServiceImpl.java" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/MilestoneDaoImpl.java" />
-        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/createResearchProject.xhtml" />
-        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/tabbedView.xhtml" />
-        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/structureLayout.xhtml" />
-        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css" />
-        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/addMilestone.xhtml" />
         <option value="$PROJECT_DIR$/rnet-war/src/main/java/action/AddMilestoneAction.java" />
         <option value="$PROJECT_DIR$/rnet-war/src/main/java/converters/StringToBytesConverter.java" />
         <option value="$PROJECT_DIR$/rnet-war/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/rnet-war/src/main/java/action/ShowMilestoneAction.java" />
-        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml" />
         <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchProject.xhtml" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/tabbedView.xhtml" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/utils/ConstantValues.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDaoImpl.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDao.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchService.java" />
+        <option value="$PROJECT_DIR$/rnet-main/src/main/java/utils/Paginator.java" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchFeedAction.java" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css" />
+        <option value="$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchFeed.xhtml" />
       </list>
     </option>
   </component>
@@ -475,78 +487,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="research-net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rnet-war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="research-net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rnet-war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -636,23 +576,131 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="research-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="research-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="research-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="research-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rnet-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Facets" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="52" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="52" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="52" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="52" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="52" />
@@ -669,8 +717,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -678,8 +726,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -687,15 +735,15 @@
       <recent name="$PROJECT_DIR$/rnet-war/src/main/resources" />
       <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-main\src\main\resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rnet-main/src/main/resources" />
       <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-app\src\main\resources" />
       <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-main\src\main\resources" />
       <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-war\src\main\resources" />
       <recent name="C:\Users\diptopol\IdeaProjects\research-net\rnet-app\APP-INF" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.Deploy">
@@ -735,19 +783,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -774,6 +809,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -812,12 +860,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
       <deployment />
       <server-settings />
@@ -827,6 +869,12 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="UnitTest" type="JUnit" factoryName="JUnit">
@@ -916,7 +964,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -941,7 +989,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22727273" sideWeight="0.7777778" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5204545" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5204545" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32934132" sideWeight="0.67007965" order="3" side_tool="false" content_ui="tabs" x="68" y="588" width="1017" height="829" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1017,65 +1065,21 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/createResearchProject.xhtml">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/test/java/dao/TestUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="608" selection-end="608" vertical-scroll-proportion="-9.153846">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.083333336" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchProjectAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="41" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/tabbedView.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="14" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/resources/templates/structureLayout.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="23" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/addMilestone.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="21" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/AddMilestoneAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="40" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/converters/StringToBytesConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="35" selection-start="921" selection-end="921" vertical-scroll-proportion="0.8333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/resources/messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="50" selection-end="50" vertical-scroll-proportion="0.083333336">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/test/java/dao/TestUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.083333336">
+        <state line="26" column="51" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1087,44 +1091,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchProject.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="48" selection-start="504" selection-end="611" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowMilestoneAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="1" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0">
+        <state line="57" column="23" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.6666667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/utils/ConstantValues.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="70" selection-start="950" selection-end="1015" vertical-scroll-proportion="-8.5">
+        <state line="11" column="29" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchProjectAction.java">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="41" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="39" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0">
+        <state line="18" column="60" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/dao/ResearchDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="54" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
+        <state line="57" column="64" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchProject.xhtml">
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="111" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.40052357">
+        <state line="19" column="60" selection-start="592" selection-end="592" vertical-scroll-proportion="0.5833333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/services/ResearchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="63" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-main/src/main/java/utils/Paginator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="16" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showMilestone.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="34" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-8.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/resources/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="2" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/java/action/ShowResearchFeedAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="5" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnet-war/src/main/webapp/showResearchFeed.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="38" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.9078591">
           <folding />
         </state>
       </provider>

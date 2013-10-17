@@ -1,5 +1,6 @@
 package dao;
 
+import static utils.ConstantValues.RESEARCH_LIST_LIMIT;
 import domain.Research;
 import exceptions.NoResearchFoundException;
 import org.slf4j.Logger;
@@ -52,6 +53,15 @@ public class ResearchDaoImpl implements ResearchDao {
 
     public Research findResearchBy(int researchId) {
         return entityManager.find(Research.class, researchId);
+    }
+
+    public List<Research> findResearchList(int page_number) {
+        int start = page_number * RESEARCH_LIST_LIMIT;
+        int maxResult = start + RESEARCH_LIST_LIMIT;
+        return entityManager.createQuery("SELECT research FROM Research research ORDER BY research.startingTime desc")
+                .setFirstResult(start)
+                .setMaxResults(maxResult)
+                .getResultList();
     }
 
 

@@ -9,7 +9,9 @@ package utils;
  */
 public class ConstantValues {
     public static int NUMBER_OF_ADD_MILESTONES_IN_ONE_PAGE=3;
+    public static int RESEARCH_LIST_LIMIT=10;
     public static String MILESTONE_INCOMPLETE="incomplete";
     public static String MILESTONE_COMPLETE="complete";
+
 
 }

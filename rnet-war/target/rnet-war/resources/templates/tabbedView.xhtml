@@ -11,8 +11,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:body>
@@ -20,7 +18,10 @@
         <ui:define name="content" >
             <div id="left_sidebar">
                 <div class="left_menu_item" >
-                    <h4><a href="">Create Research Project</a></h4>
+                    <h4><a href="">Research Feed</a></h4>
+                </div>
+                <div class="left_menu_item" >
+                    <h4><h:link outcome="createResearchProject.xhtml">Create Research Project</h:link></h4>
                 </div>
                 <div class="left_menu_item" >
                     <h4><a href="">Profile</a></h4>
