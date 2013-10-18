@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/17/13
+  Time: 1:57 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content" >
+            <h:form id="menuform">
+                <p:tabMenu activeIndex="1">
+                    <p:menuitem value="#{message.menuOverview}" outcome="showResearchProject.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuWorkboard}" outcome="showWorkBoard.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuMilestone}" outcome="showMilestone.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuJournalPaper}" outcome="showJournalPaper.xhtml"/>
+                    <p:menuitem value="#{message.menuResources}" outcome="showResources.xhtml"/>
+                </p:tabMenu>
+            </h:form>
+
+            <h:form rendered="#{showWorkBoardAction.currentMilestone != null}">
+                <h:outputText value="#{message.reportForMilestone} #{showWorkBoardAction.currentMilestone.sequence}" />
+                <p:editor value="#{showWorkBoardAction.report.reportData}">
+                    <f:converter converterId="StringToBytesConverter" />
+                </p:editor>
+                <h:commandButton value="#{message.reportSubmit}" action="#{showWorkBoardAction.submitReport()}" >
+                    <f:param name="research_id" value="#{showWorkBoardAction.researchId}" />
+                </h:commandButton>
+            </h:form>
+
+            <fieldset id="previousReports">
+                <legend>#{message.previousReportList}</legend>
+                    <h:outputText value="#{message.noData}" rendered="#{empty showWorkBoardAction.previousReportList}"/>
+                    <ui:repeat var="report" value="#{showWorkBoardAction.previousReportList}">
+                        <div class="reportDiv">
+                            <h:outputText value="#{report.reportingTime} - #{message.milestoneSequence} #{report.milestone.sequence}"/>
+                            <div>
+                                <h:link outcome="showReport.xhtml?report_id=#{report.reportId}">
+                                    <h:outputText value="#{report.reportData}" escape="false">
+                                        <f:converter converterId="ReportDataConverter" />
+                                    </h:outputText>
+                                </h:link>
+                            </div>
+                        </div>
+                    </ui:repeat>
+            </fieldset>
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

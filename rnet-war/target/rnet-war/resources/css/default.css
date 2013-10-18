@@ -55,6 +55,17 @@ body {
     color: #fff;
 }
 
+#previousReports {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reportDiv {
+    width: 80%;
+
+}
+
 .researchfeed_item {
     height: auto;
     font-size: small;

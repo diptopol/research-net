@@ -54,7 +54,7 @@ public class ResearchDaoImpl implements ResearchDao {
     public Research findResearchBy(int researchId) {
         return entityManager.find(Research.class, researchId);
     }
-
+    @Override
     public List<Research> findResearchList(int page_number) {
         int start = page_number * RESEARCH_LIST_LIMIT;
         int maxResult = start + RESEARCH_LIST_LIMIT;

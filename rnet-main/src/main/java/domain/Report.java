@@ -26,8 +26,14 @@ public class Report implements Serializable{
     @Column(name = "report_data")
     private byte[] reportData;
     @ManyToOne(targetEntity = User.class)
+    @JoinTable(name = "user_report",
+            joinColumns = {@JoinColumn(name = "report_id", insertable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "user_id", insertable = false, updatable = false)})
     private User user;
     @ManyToOne(targetEntity = Milestone.class)
+    @JoinTable(name = "milestone_report",
+            joinColumns = {@JoinColumn(name = "report_id", insertable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "milestone_id", insertable = false, updatable = false)})
     private Milestone milestone;
 
     public List<Feedback> getFeedbackList() {

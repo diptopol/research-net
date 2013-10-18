@@ -36,4 +36,8 @@ public class MilestoneServiceImpl implements MilestoneService{
             milestoneDao.addMilestone(milestone, research);
         }
     }
+
+    public Milestone findIncompleteMilestoneBy(int researchId) {
+       return milestoneDao.findIncompleteMilestoneBy(researchId);
+    }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/18/13
+  Time: 4:16 AM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content" >
+            <h:form id="menuform">
+                <p:tabMenu activeIndex="1">
+                    <p:menuitem value="#{message.menuOverview}" outcome="showResearchProject.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuWorkboard}" outcome="showWorkBoard.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuMilestone}" outcome="showMilestone.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuJournalPaper}" outcome="showJournalPaper.xhtml"/>
+                    <p:menuitem value="#{message.menuResources}" outcome="showResources.xhtml"/>
+                </p:tabMenu>
+            </h:form>
+
+            <div id="reportDiv">
+                <h:outputText value="#{showReportAndFeedbackAction.report.reportData}" escape="false">
+                    <f:converter converterId="ReportDataConverter" />
+                </h:outputText>
+            </div>
+
+            <div id="feedbackDiv">
+                <ui:repeat value="" var="">
+
+                </ui:repeat>
+            </div>
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

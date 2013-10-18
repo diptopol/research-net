@@ -21,7 +21,7 @@
             <h:form id="menuform">
                 <p:tabMenu activeIndex="0">
                     <p:menuitem value="OverView" outcome="showResearchProject.xhtml?research_id=#{showMilestoneAction.researchId}"/>
-                    <p:menuitem value="Workboard" />
+                    <p:menuitem value="Workboard" outcome="showWorkBoard.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                     <p:menuitem value="Milestone" outcome="showMilestone.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                     <p:menuitem value="Journal Paper" outcome="showJournalPaper.xhtml"/>
                     <p:menuitem value="Resources" outcome="showResources.xhtml"/>
@@ -42,7 +42,7 @@
                         #{message.researchProjectProposal}
                     </p:column>
                     <p:column>
-                        <h:outputText value="#{showResearchProjectAction.research.researchData}">
+                        <h:outputText value="#{showResearchProjectAction.research.researchData}" escape="false">
                             <f:converter converterId="StringToBytesConverter"/>
                         </h:outputText>
                     </p:column>

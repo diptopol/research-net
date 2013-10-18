@@ -34,5 +34,9 @@ public class Utils {
         return isNotACollaborator;
     }
 
+    public static Date getSystemDate() {
+        return Calendar.getInstance().getTime();
+    }
+
 
 }

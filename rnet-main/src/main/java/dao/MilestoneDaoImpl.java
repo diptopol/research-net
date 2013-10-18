@@ -1,5 +1,6 @@
 package dao;
 
+import static utils.ConstantValues.MILESTONE_INCOMPLETE;
 import domain.Milestone;
 import domain.Research;
 import org.slf4j.Logger;
@@ -46,5 +47,17 @@ public class MilestoneDaoImpl implements MilestoneDao {
         }
         oldMilestoneList.add(milestone);
         research.setMilestoneList(oldMilestoneList);
+    }
+
+    public Milestone findIncompleteMilestoneBy(int researchId) {
+        List<Milestone> milestoneList = entityManager.createQuery("SELECT milestone FROM Milestone milestone " +
+                 "WHERE milestone.research.researchId =:id AND " +
+                 "milestone.milestoneStatus =:incomplete ORDER BY milestone.sequence asc")
+                 .setParameter("id", researchId)
+                 .setParameter("incomplete", MILESTONE_INCOMPLETE).getResultList();
+        if(milestoneList.isEmpty()) {
+            return null;
+        }
+        return milestoneList.get(0);
     }
 }

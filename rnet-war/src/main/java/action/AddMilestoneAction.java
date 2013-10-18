@@ -81,6 +81,6 @@ public class AddMilestoneAction implements Serializable{
     public String addMilestone() {
         logger.info("addMilestone researchId :" + researchId);
         milestoneService.addMilestoneList(milestoneList, researchId);
-        return "showMilestone.xhtml?research_id"+researchId+"&faces-redirect=true";
+        return "showMilestone.xhtml?research_id="+researchId+"&faces-redirect=true";
     }
 }

@@ -32,7 +32,10 @@ public class User implements Serializable{
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "user", fetch = FetchType.LAZY)
     private List<Collaborator> collaboratorList;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_report",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "report_id")})
     private List<Report> reportList;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")

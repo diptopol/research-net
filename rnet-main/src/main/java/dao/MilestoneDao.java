@@ -15,4 +15,5 @@ import java.util.List;
 public interface MilestoneDao {
     public List<Milestone> findMilestoneListBy(int researchId);
     public void addMilestone(Milestone milestone, Research research);
+    public Milestone findIncompleteMilestoneBy(int researchId);
 }

@@ -29,7 +29,10 @@ public class Milestone implements Serializable{
             inverseJoinColumns = {@JoinColumn(name = "research_id", insertable = false, updatable = false)})
     private Research research;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "milestone")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "milestone_report",
+            joinColumns = {@JoinColumn(name = "milestone_id")},
+            inverseJoinColumns = {@JoinColumn(name = "report_id")})
     private List<Report> reportList;
 
     public Research getResearch() {

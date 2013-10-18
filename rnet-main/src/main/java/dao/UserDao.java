@@ -18,4 +18,5 @@ import javax.persistence.NoResultException;
 public interface UserDao {
     public User getUserBy(User user) throws NoUserFoundException;
     public void insert(User user);
+    public User findUserBy(int userId);
 }

@@ -15,4 +15,5 @@ import java.util.List;
 public interface MilestoneService {
     public List<Milestone> findMilestoneListBy(int researchId);
     public void addMilestoneList(List<Milestone>milestones, int researchId);
+    public Milestone findIncompleteMilestoneBy(int researchId);
 }

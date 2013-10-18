@@ -41,13 +41,14 @@ public class UserDaoImpl implements UserDao{
         else {
             return validUsers.get(0);
         }
-
-
-
     }
 
     @Override
     public void insert(User user) {
         entityManager.persist(user);
+    }
+
+    public User findUserBy(int userId) {
+        return entityManager.find(User.class, userId);
     }
 }

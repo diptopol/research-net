@@ -11,13 +11,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core">
+        >
 
 <h:body>
     <ui:composition template="resources/templates/tabbedView.xhtml" >
         <ui:define name="middle_content">
+            <h:outputText value="#{message.noData}" rendered="#{empty showResearchFeedAction.researchList}"/>
             <ui:repeat var="research" value="#{showResearchFeedAction.researchList}">
                 <div class="researchfeed_item">
                     <div>
