@@ -16,4 +16,6 @@ public interface MilestoneDao {
     public List<Milestone> findMilestoneListBy(int researchId);
     public void addMilestone(Milestone milestone, Research research);
     public Milestone findIncompleteMilestoneBy(int researchId);
+    public void updateMilestone(Milestone milestone);
+    public boolean isAllMilestoneComplete(int researchId);
 }

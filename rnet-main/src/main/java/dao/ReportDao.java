@@ -17,4 +17,5 @@ public interface ReportDao {
     public void insert(User user, Milestone milestone, Report report);
     public List<Report> findReportListBy(int researchId);
     public Report findReportBy(int reportId);
+    public void updateReport(Report report);
 }

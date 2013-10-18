@@ -15,6 +15,11 @@ public class ConstantValues {
     public static String MILESTONE_COMPLETE="complete";
     public static String REPORT_ACCEPTED="accepted";
     public static String REPORT_UNACCEPTED="unaccepted";
+    public static String ROLE_MENTOR="mentor";
+    public static String ROLE_COLLABORATOR="collaborator";
+    public static String RESEARCH_STATUS_INACTIVE="inactive";
+    public static String RESEARCH_STATUS_ACTIVE="active";
+    public static String RESEARCH_STATUS_COMPLETE="complete";
 
 
 }

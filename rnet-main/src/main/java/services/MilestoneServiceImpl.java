@@ -24,11 +24,12 @@ public class MilestoneServiceImpl implements MilestoneService{
     @EJB
     private ResearchDao researchDao;
 
-
+    @Override
     public List<Milestone> findMilestoneListBy(int researchId) {
         return milestoneDao.findMilestoneListBy(researchId);
     }
 
+    @Override
     @TransactionAttribute
     public void addMilestoneList(List<Milestone>milestones, int researchId) {
         Research research = researchDao.findResearchBy(researchId);
@@ -37,7 +38,18 @@ public class MilestoneServiceImpl implements MilestoneService{
         }
     }
 
+    @Override
     public Milestone findIncompleteMilestoneBy(int researchId) {
        return milestoneDao.findIncompleteMilestoneBy(researchId);
     }
+
+    @Override
+    public void updateMilestone(Milestone milestone) {
+        milestoneDao.updateMilestone(milestone);
+    }
+
+    public boolean isAllMilestoneComplete(int researchId) {
+        return milestoneDao.isAllMilestoneComplete(researchId);
+    }
+
 }

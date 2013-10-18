@@ -16,4 +16,5 @@ public interface ReportService {
     public void insertReport(int userId, Milestone milestone, Report report);
     public List<Report> findReportListBy(int researchId);
     public Report findReportBy(int reportId);
+    public void updateReport(Report report);
 }

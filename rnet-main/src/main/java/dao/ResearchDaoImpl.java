@@ -48,7 +48,6 @@ public class ResearchDaoImpl implements ResearchDao {
         else {
             return researchList.get(0).getResearchId();
         }
-
     }
 
     public Research findResearchBy(int researchId) {
@@ -58,11 +57,14 @@ public class ResearchDaoImpl implements ResearchDao {
     public List<Research> findResearchList(int page_number) {
         int start = page_number * RESEARCH_LIST_LIMIT;
         int maxResult = start + RESEARCH_LIST_LIMIT;
-        return entityManager.createQuery("SELECT research FROM Research research ORDER BY research.startingTime desc")
+        return entityManager.createQuery("SELECT research FROM Research research ORDER BY research.startingTime DESC")
                 .setFirstResult(start)
                 .setMaxResults(maxResult)
                 .getResultList();
     }
 
-
+    @Override
+    public void updateResearch(Research research) {
+        entityManager.merge(research);
+    }
 }

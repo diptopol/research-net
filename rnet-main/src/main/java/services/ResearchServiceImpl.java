@@ -45,4 +45,8 @@ public class ResearchServiceImpl implements ResearchService{
     public List<Research> findResearchList(int page_number) {
         return researchDao.findResearchList(page_number);
     }
+
+    public void updateResearch(Research research) {
+        researchDao.updateResearch(research);
+    }
 }

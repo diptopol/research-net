@@ -1,5 +1,6 @@
 package action;
 
+import static utils.ConstantValues.RESEARCH_STATUS_INACTIVE;
 import domain.Collaborator;
 import domain.Research;
 import domain.User;
@@ -72,7 +73,7 @@ public class CreateResearchProjectAction implements Serializable {
         user.setUsername("dipto");
         user.setPassword("therap");
 
-        research.setResearchStatus("inactive");
+        research.setResearchStatus(RESEARCH_STATUS_INACTIVE);
         try {
             int research_id = researchService.createResearchProject(research, collaborator,user);
             return "showResearchProject.xhtml?research_id="+research_id+"&faces-redirect=true";

@@ -38,7 +38,10 @@ public class User implements Serializable{
             inverseJoinColumns = {@JoinColumn(name = "report_id")})
     private List<Report> reportList;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_feedback",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "feedback_id")})
     private List<Feedback> feedbackList;
 
     public List<Collaborator> getCollaboratorList() {

@@ -18,4 +18,5 @@ public interface ResearchService {
     public int createResearchProject(Research research, Collaborator collaborator, User user) throws NoResearchFoundException;
     public Research findResearchBy(int research_id);
     public List<Research> findResearchList(int page_number);
+    public void updateResearch(Research research);
 }

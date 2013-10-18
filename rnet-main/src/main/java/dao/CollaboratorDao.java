@@ -16,4 +16,5 @@ import java.util.List;
 public interface CollaboratorDao {
     public void insert(int research_id, Collaborator collaborator, User user);
     public List<Collaborator> findCollaboratorsBy(int research_id);
+    public Collaborator findCollaboratorBy(int researchId, int userId);
 }

@@ -20,24 +20,57 @@
         <ui:define name="middle_content" >
             <h:form id="menuform">
                 <p:tabMenu activeIndex="1">
-                    <p:menuitem value="#{message.menuOverview}" outcome="showResearchProject.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
-                    <p:menuitem value="#{message.menuWorkboard}" outcome="showWorkBoard.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
-                    <p:menuitem value="#{message.menuMilestone}" outcome="showMilestone.xhtml?research_id=#{showWorkBoardAction.researchId}"/>
+                    <p:menuitem value="#{message.menuOverview}" outcome="showResearchProject.xhtml?research_id=#{showReportAndFeedbackAction.researchId}"/>
+                    <p:menuitem value="#{message.menuWorkboard}" outcome="showWorkBoard.xhtml?research_id=#{showReportAndFeedbackAction.researchId}"/>
+                    <p:menuitem value="#{message.menuMilestone}" outcome="showMilestone.xhtml?research_id=#{showReportAndFeedbackAction.researchId}"/>
                     <p:menuitem value="#{message.menuJournalPaper}" outcome="showJournalPaper.xhtml"/>
                     <p:menuitem value="#{message.menuResources}" outcome="showResources.xhtml"/>
                 </p:tabMenu>
             </h:form>
-
             <div id="reportDiv">
-                <h:outputText value="#{showReportAndFeedbackAction.report.reportData}" escape="false">
-                    <f:converter converterId="ReportDataConverter" />
-                </h:outputText>
+                <h:form>
+                    <h:commandButton value="#{message.reportAccept}" styleClass="reportAccept"
+                                     action="#{showReportAndFeedbackAction.stateChange}"
+                                     rendered="#{showReportAndFeedbackAction.buttonVisible}">
+                        <f:param name="report_id" value="#{showReportAndFeedbackAction.reportId}" />
+                        <f:param name="research_id" value="#{showReportAndFeedbackAction.researchId}" />
+                    </h:commandButton>
+                    <h:outputText value="#{message.reportAccepted}" style="color: green" styleClass="reportAccept"
+                                  rendered="#{showReportAndFeedbackAction.textVisible}"/>
+                </h:form>
+                <div class="reportDiv_item">
+                    <h:outputText value="#{showReportAndFeedbackAction.report.reportData}" escape="false">
+                        <f:converter converterId="StringToBytesConverter" />
+                    </h:outputText>
+                </div>
             </div>
 
             <div id="feedbackDiv">
-                <ui:repeat value="" var="">
+                <ui:repeat var="feedback" value="#{showReportAndFeedbackAction.feedbackList}">
+                    <div class="feedbackDiv_item">
+                        <div Class="feedback_user">
+                            <h:outputText   value="#{feedback.user.userInformation.name}#{message.feedbackUser}" />
+                        </div>
+                        <div Class="feedback_data">
+                            <h:outputText value="#{feedback.feedbackData}" escape="false">
+                                <f:converter converterId="StringToBytesConverter" />
+                            </h:outputText>
+                        </div>
+                        <div Class="feedback_time">
+                            <h:outputText value="#{message.feedbackTime} #{feedback.feedbackTime}" />
+                        </div>
 
+                    </div>
                 </ui:repeat>
+                <h:form>
+                    <p:editor styleClass="feedbackDiv_item" value="#{showReportAndFeedbackAction.feedback.feedbackData}">
+                        <f:converter converterId="StringToBytesConverter" />
+                    </p:editor>
+                    <h:commandButton value="#{message.feedbackSubmit}" action="#{showReportAndFeedbackAction.submitFeedback}">
+                        <f:param name="report_id" value="#{showReportAndFeedbackAction.reportId}" />
+                        <f:param name="research_id" value="#{showReportAndFeedbackAction.researchId}" />
+                    </h:commandButton>
+                </h:form>
             </div>
 
         </ui:define>

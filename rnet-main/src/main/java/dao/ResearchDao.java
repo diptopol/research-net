@@ -16,4 +16,5 @@ public interface ResearchDao {
     public int insert(Research research) throws NoResearchFoundException;
     public Research findResearchBy(int researchId);
     public List<Research> findResearchList(int page_number);
+    public void updateResearch(Research research);
 }

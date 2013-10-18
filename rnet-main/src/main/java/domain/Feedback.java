@@ -21,9 +21,18 @@ public class Feedback implements Serializable{
     private Date feedbackTime;
     @Lob
     @Column(name = "feedback_data")
-    private Byte[] feedbackData;
+    private byte[] feedbackData;
     @ManyToOne(targetEntity = Report.class)
+    @JoinTable(name = "report_feedback",
+            joinColumns = {@JoinColumn(name = "feedback_id")},
+            inverseJoinColumns = {@JoinColumn(name = "report_id")})
     private Report report;
+
+    @ManyToOne(targetEntity = User.class)
+    @JoinTable(name = "user_feedback",
+            joinColumns = {@JoinColumn(name = "feedback_id")},
+            inverseJoinColumns = {@JoinColumn(name = "user_id")})
+    private User user;
 
     public int getFeedbackId() {
         return feedbackId;
@@ -41,11 +50,11 @@ public class Feedback implements Serializable{
         this.feedbackTime = feedbackTime;
     }
 
-    public Byte[] getFeedbackData() {
+    public byte[] getFeedbackData() {
         return feedbackData;
     }
 
-    public void setFeedbackData(Byte[] feedbackData) {
+    public void setFeedbackData(byte[] feedbackData) {
         this.feedbackData = feedbackData;
     }
 
@@ -64,8 +73,4 @@ public class Feedback implements Serializable{
     public void setUser(User user) {
         this.user = user;
     }
-
-    @ManyToOne(targetEntity = User.class)
-    private User user;
-
 }

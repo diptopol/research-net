@@ -40,12 +40,13 @@
 
             <fieldset id="previousReports">
                 <legend>#{message.previousReportList}</legend>
+                <div id="reportDiv">
                     <h:outputText value="#{message.noData}" rendered="#{empty showWorkBoardAction.previousReportList}"/>
                     <ui:repeat var="report" value="#{showWorkBoardAction.previousReportList}">
-                        <div class="reportDiv">
+                        <div class="reportDiv_item">
                             <h:outputText value="#{report.reportingTime} - #{message.milestoneSequence} #{report.milestone.sequence}"/>
                             <div>
-                                <h:link outcome="showReport.xhtml?report_id=#{report.reportId}">
+                                <h:link outcome="showReport.xhtml?report_id=#{report.reportId}&amp;research_id=#{showWorkBoardAction.researchId}">
                                     <h:outputText value="#{report.reportData}" escape="false">
                                         <f:converter converterId="ReportDataConverter" />
                                     </h:outputText>
@@ -53,6 +54,7 @@
                             </div>
                         </div>
                     </ui:repeat>
+                </div>
             </fieldset>
 
         </ui:define>

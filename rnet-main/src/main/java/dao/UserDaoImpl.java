@@ -48,6 +48,7 @@ public class UserDaoImpl implements UserDao{
         entityManager.persist(user);
     }
 
+    @Override
     public User findUserBy(int userId) {
         return entityManager.find(User.class, userId);
     }

@@ -22,4 +22,8 @@ public class CollaboratorServiceImpl implements CollaboratorService {
     public List<Collaborator> findCollaboratorsBy(int research_id) {
         return collaboratorDao.findCollaboratorsBy(research_id);
     }
+
+    public Collaborator findCollaboratorBy(int researchId, int userId) {
+         return collaboratorDao.findCollaboratorBy(researchId, userId);
+    }
 }

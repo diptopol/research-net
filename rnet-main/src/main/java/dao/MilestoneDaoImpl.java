@@ -33,6 +33,7 @@ public class MilestoneDaoImpl implements MilestoneDao {
         return researchList.get(0);
     }
 
+    @Override
     public List<Milestone> findMilestoneListBy(int researchId) {
         return entityManager.createQuery("SELECT milestone FROM Milestone milestone WHERE " +
                 "milestone.research.researchId =:id")
@@ -40,6 +41,7 @@ public class MilestoneDaoImpl implements MilestoneDao {
                 .getResultList();
     }
 
+    @Override
     public void addMilestone(Milestone milestone, Research research) {
         List<Milestone> oldMilestoneList = findMilestoneListBy(research.getResearchId());
         if(oldMilestoneList == null) {
@@ -49,6 +51,7 @@ public class MilestoneDaoImpl implements MilestoneDao {
         research.setMilestoneList(oldMilestoneList);
     }
 
+    @Override
     public Milestone findIncompleteMilestoneBy(int researchId) {
         List<Milestone> milestoneList = entityManager.createQuery("SELECT milestone FROM Milestone milestone " +
                  "WHERE milestone.research.researchId =:id AND " +
@@ -59,5 +62,25 @@ public class MilestoneDaoImpl implements MilestoneDao {
             return null;
         }
         return milestoneList.get(0);
+    }
+
+    @Override
+    public void updateMilestone(Milestone milestone) {
+        entityManager.merge(milestone);
+    }
+
+    public boolean isAllMilestoneComplete(int researchId) {
+        List<Milestone> incompleteMilestoneList = entityManager.createQuery("SELECT milestone FROM Milestone milestone WHERE " +
+                "milestone.milestoneStatus =:status AND milestone.research.researchId =:id")
+                .setParameter("status", MILESTONE_INCOMPLETE)
+                .setParameter("id", researchId)
+                .getResultList();
+
+        if(incompleteMilestoneList.isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

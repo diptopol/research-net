@@ -22,36 +22,35 @@ import java.util.List;
 @Stateless
 public class ReportDaoImpl implements ReportDao{
     private static final Logger logger = LoggerFactory.getLogger(ReportDaoImpl.class);
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistDB")
     EntityManager entityManager;
 
-    private List<Report> findResearchListByMilestone(int milestoneId) {
+    private List<Report> findReportListByMilestone(int milestoneId) {
         return entityManager.createQuery("SELECT report FROM Report report WHERE " +
                 "report.milestone.milestoneId =:id")
                 .setParameter("id", milestoneId)
                 .getResultList();
     }
 
-    private List<Report> findResearchListByUser(int userId) {
+    private List<Report> findReportListByUser(int userId) {
         return entityManager.createQuery("SELECT report FROM Report report WHERE " +
                 "report.user.userId =:id")
                 .setParameter("id", userId)
                 .getResultList();
     }
 
-
-
+    @Override
     public void insert(User user, Milestone milestone, Report report) {
         logger.info("ReportDaoImpl :milestone_id "+milestone.getMilestoneId());
 
-        List<Report> userReportList = findResearchListByUser(user.getUserId());
+        List<Report> userReportList = findReportListByUser(user.getUserId());
         if(userReportList == null) {
             userReportList = new ArrayList<Report>();
         }
         userReportList.add(report);
         user.setReportList(userReportList);
 
-        List<Report> milestoneReportList = findResearchListByMilestone(milestone.getMilestoneId());
+        List<Report> milestoneReportList = findReportListByMilestone(milestone.getMilestoneId());
         if(milestoneReportList == null) {
             milestoneReportList = new ArrayList<Report>();
         }
@@ -60,13 +59,20 @@ public class ReportDaoImpl implements ReportDao{
         entityManager.merge(milestone);
     }
 
+    @Override
     public List<Report> findReportListBy(int researchId) {
         return entityManager.createQuery("SELECT report FROM Report report WHERE " +
-                "report.milestone.research.researchId =:id")
+                "report.milestone.research.researchId =:id ORDER BY report.reportingTime DESC")
                 .setParameter("id", researchId).getResultList();
     }
 
+    @Override
     public Report findReportBy(int reportId) {
         return entityManager.find(Report.class, reportId);
+    }
+
+    @Override
+    public void updateReport(Report report) {
+        entityManager.merge(report);
     }
 }

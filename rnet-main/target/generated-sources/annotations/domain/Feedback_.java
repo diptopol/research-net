@@ -10,7 +10,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Feedback_ {
 
 	public static volatile SingularAttribute<Feedback, Report> report;
-	public static volatile SingularAttribute<Feedback, Byte[]> feedbackData;
+	public static volatile SingularAttribute<Feedback, byte[]> feedbackData;
 	public static volatile SingularAttribute<Feedback, Date> feedbackTime;
 	public static volatile SingularAttribute<Feedback, Integer> feedbackId;
 	public static volatile SingularAttribute<Feedback, User> user;

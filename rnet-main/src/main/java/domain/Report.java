@@ -36,6 +36,12 @@ public class Report implements Serializable{
             inverseJoinColumns = {@JoinColumn(name = "milestone_id", insertable = false, updatable = false)})
     private Milestone milestone;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "report_feedback",
+            joinColumns = {@JoinColumn(name = "report_id")},
+            inverseJoinColumns = {@JoinColumn(name = "feedback_id")})
+    private List<Feedback> feedbackList;
+
     public List<Feedback> getFeedbackList() {
         return feedbackList;
     }
@@ -91,7 +97,4 @@ public class Report implements Serializable{
     public void setReportId(int reportId) {
         this.reportId = reportId;
     }
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "report")
-    private List<Feedback> feedbackList;
 }
