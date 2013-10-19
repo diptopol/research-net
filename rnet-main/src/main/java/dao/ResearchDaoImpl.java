@@ -2,6 +2,7 @@ package dao;
 
 import static utils.ConstantValues.RESEARCH_LIST_LIMIT;
 import static utils.ConstantValues.RESEARCH_STATUS_COMPLETE;
+import static utils.Utils.getSystemDate;
 
 import domain.Research;
 import exceptions.NoResearchFoundException;
@@ -87,4 +88,6 @@ public class ResearchDaoImpl implements ResearchDao {
                 .setParameter("id", userId)
                 .getResultList();
     }
+
+
 }

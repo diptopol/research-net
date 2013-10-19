@@ -16,6 +16,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +35,8 @@ public class ShowWorkBoardAction {
     private int researchId;
     private FacesContext facesContext;
     private Report report;
+    private HttpSession session;
+    private int userId;
     private List<Report> previousReportList;
     private Milestone currentMilestone;
     @EJB
@@ -84,6 +87,9 @@ public class ShowWorkBoardAction {
         if(parameterMap.containsKey("research_id"))
             researchId = Integer.parseInt(parameterMap.get("research_id"));
         currentMilestone = milestoneService.findIncompleteMilestoneBy(researchId);
+        session = (HttpSession) facesContext.getExternalContext().getSession(false);
+        userId = (Integer) session.getAttribute("userId");
+
     }
 
     public String submitReport() {
@@ -92,12 +98,7 @@ public class ShowWorkBoardAction {
         report.setReportingTime(submitTime);
         report.setReportStatus(REPORT_UNACCEPTED);
 
-        User user = new User();
-        user.setUserId(1);
-        user.setUsername("dipto");
-        user.setPassword("therap");
-
-        reportService.insertReport(user.getUserId(), currentMilestone, report);
+        reportService.insertReport(userId, currentMilestone, report);
         return "showWorkBoard.xhtml?research_id="+researchId+"&faces-redirect=true";
     }
 }

@@ -1,7 +1,10 @@
 package action;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +16,13 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class LogoutAction {
+    private FacesContext facesContext;
+    private HttpSession session;
+
     public String logout() {
-        return "login.xhtml";
+        facesContext = FacesContext.getCurrentInstance();
+        session = (HttpSession) facesContext.getExternalContext().getSession(false);
+        session.invalidate();
+        return "login.xhtml?faces-redirect=true";
     }
 }

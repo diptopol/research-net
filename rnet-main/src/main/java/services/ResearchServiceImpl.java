@@ -1,5 +1,6 @@
 package services;
 
+import static utils.Utils.getSystemDate;
 import dao.CollaboratorDao;
 import dao.ResearchDao;
 import dao.UserDao;
@@ -11,8 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ejb.EJB;
+import javax.ejb.Schedule;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -40,24 +43,29 @@ public class ResearchServiceImpl implements ResearchService{
         collaboratorDao.insert(research_id, collaborator, user);
         return research_id;
     }
-
+    @Override
     public Research findResearchBy(int research_id) {
          return researchDao.findResearchBy(research_id);
     }
-
+    @Override
     public List<Research> findResearchList(int page_number) {
         return researchDao.findResearchList(page_number);
     }
-
+    @Override
     public void updateResearch(Research research) {
         researchDao.updateResearch(research);
     }
-
+    @Override
     public List<Research> findCompleteResearchListBy(int userId) {
         return researchDao.findCompleteResearchListBy(userId);
     }
-
+    @Override
     public List<Research> findIncompleteResearchListBy(int userId) {
         return researchDao.findIncompleteResearchListBy(userId);
+    }
+    @Schedule(dayOfWeek = "0-7", hour = "*", minute = "*")
+    @TransactionAttribute
+    public void makeResearchActive() {
+        logger.info("MakeResearchActive");
     }
 }

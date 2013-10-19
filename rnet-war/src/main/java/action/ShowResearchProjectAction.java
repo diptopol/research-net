@@ -1,11 +1,7 @@
 package action;
 
-import static utils.Utils.isJoiningDateRemains;
-import static utils.Utils.isUserEligibleToJoin;
-
 import domain.Collaborator;
 import domain.Research;
-import domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import services.CollaboratorService;
@@ -17,7 +13,13 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
-import java.util.*;
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import static utils.Utils.isJoiningDateRemains;
+import static utils.Utils.isUserEligibleToJoin;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,6 +32,13 @@ import java.util.*;
 @RequestScoped
 public class ShowResearchProjectAction {
     private static final Logger logger = LoggerFactory.getLogger(ShowResearchProjectAction.class);
+    private int researchId;
+    private FacesContext facesContext;
+    private Research research;
+    private List<Collaborator> collaboratorList;
+    private List<String> collaboratorNameList;
+    private HttpSession session;
+    private int userId;
 
     @EJB
     private ResearchService researchService;
@@ -37,22 +46,10 @@ public class ShowResearchProjectAction {
     private CollaboratorService collaboratorService;
     @EJB
     private UserService userService;
-    private int researchId;
-    private FacesContext facesContext;
-    private Research research;
-    private List<Collaborator> collaboratorList;
-    private List<String> collaboratorNameList;
+
 
     public List<String> getCollaboratorNameList() {
         return collaboratorNameList;
-    }
-
-    public List<Collaborator> getCollaboratorList() {
-        return collaboratorList;
-    }
-
-    public void setCollaboratorList(List<Collaborator> collaboratorList) {
-        this.collaboratorList = collaboratorList;
     }
 
     public Research getResearch() {
@@ -66,9 +63,12 @@ public class ShowResearchProjectAction {
     @PostConstruct
     private void startUp() {
         facesContext = FacesContext.getCurrentInstance();
+        session = (HttpSession) facesContext.getExternalContext().getSession(false);
+        userId = (Integer) session.getAttribute("userId");
+
         Map<String,String> parameterMap = facesContext.getExternalContext().getRequestParameterMap();
         researchId = Integer.parseInt(parameterMap.get("research_id"));
-        logger.info("ShowResearchProject :"+researchId);
+
         research = researchService.findResearchBy(researchId);
         collaboratorList = collaboratorService.findCollaboratorsBy(researchId);
         collaboratorNameList = new ArrayList<String>();
@@ -81,22 +81,8 @@ public class ShowResearchProjectAction {
     }
 
     public boolean isVisible() {
-        User user = new User();
-        user.setUserId(2);
-        user.setUsername("dipto");
-        user.setPassword("therap");
-
-        if(isJoiningDateRemains(research.getStartingTime()) && isUserEligibleToJoin(user.getUserId(), collaboratorList))
+        if(isJoiningDateRemains(research.getStartingTime()) && isUserEligibleToJoin(userId, collaboratorList))
             return true;
         else return false;
     }
-
-    public String goResearchProjectOverview() {
-        return "showResearchProject.xhtml?research_id="+researchId+"&faces-redirect=true";
-    }
-
-    public String goMilestoneView() {
-        return "showMilestone.xhtml?research_id="+researchId;
-    }
-
 }

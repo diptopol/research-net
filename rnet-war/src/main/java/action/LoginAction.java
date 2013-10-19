@@ -9,6 +9,7 @@ import services.UserService;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
@@ -24,7 +25,7 @@ import java.io.Serializable;
  * To change this template use File | Settings | File Templates.
  */
 @Named
-@SessionScoped
+@RequestScoped
 public class LoginAction implements Serializable{
     private static final Logger logger = LoggerFactory.getLogger(LoginAction.class);
     private User user = null;

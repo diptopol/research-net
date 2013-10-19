@@ -10,6 +10,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +33,8 @@ public class ShowReportAndFeedbackAction {
     private int researchId;
     private FacesContext facesContext;
     private Report report;
-    private User user;
+    private int userId;
+    private HttpSession session;
     private List<Feedback> feedbackList;
     private Feedback feedback;
     @EJB
@@ -99,17 +101,13 @@ public class ShowReportAndFeedbackAction {
         if(feedback == null) {
             feedback = new Feedback();
         }
-
-        user = new User();
-        user.setUserId(1);
-        user.setUsername("dipto");
-        user.setPassword("therap");
-
-
+        facesContext = FacesContext.getCurrentInstance();
+        session = (HttpSession) facesContext.getExternalContext().getSession(false);
+        userId = (Integer) session.getAttribute("userId");
     }
 
     public boolean isButtonVisible() {
-        Collaborator collaborator = collaboratorService.findCollaboratorBy(researchId, user.getUserId());
+        Collaborator collaborator = collaboratorService.findCollaboratorBy(researchId, userId);
         report = getReport();
         logger.info("showReport :" + collaborator.getRole()+REPORT_UNACCEPTED+report.getReportStatus()+ROLE_MENTOR);
         if(report.getReportStatus().equals(REPORT_UNACCEPTED) && collaborator.getRole().equals(ROLE_MENTOR)) {
@@ -149,7 +147,7 @@ public class ShowReportAndFeedbackAction {
         Date submitTime = getSystemDate();
         feedback.setFeedbackTime(submitTime);
 
-        feedbackService.insertFeedback(user.getUserId(), reportId, feedback);
+        feedbackService.insertFeedback(userId, reportId, feedback);
         return "showReport.xhtml?report_id="+reportId+"&research_id="+researchId+"&faces-redirect=true";
     }
 }

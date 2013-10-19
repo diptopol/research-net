@@ -4,7 +4,9 @@ import domain.User;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,6 +18,8 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class SideMenuAction {
+    private FacesContext facesContext;
+    private HttpSession session;
     private int userId;
 
     public int getUserId() {
@@ -28,6 +32,8 @@ public class SideMenuAction {
 
     @PostConstruct
     private void startUp() {
-        userId=1;
+        facesContext = FacesContext.getCurrentInstance();
+        session = (HttpSession) facesContext.getExternalContext().getSession(false);
+        userId = (Integer) session.getAttribute("userId");
     }
 }

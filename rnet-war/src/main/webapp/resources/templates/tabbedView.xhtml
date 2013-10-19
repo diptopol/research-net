@@ -30,7 +30,9 @@
                     <h4><h:link outcome="showCurrentWorks.xhtml?user_id=#{sideMenuAction.userId}">#{message.currentWorks}</h:link></h4>
                 </div>
                 <div class="left_menu_item" >
-                    <h4><h:link outcome="">#{message.logout}</h:link></h4>
+                    <h:form>
+                        <h4><h:commandLink action="#{logoutAction.logout}">#{message.logout}</h:commandLink></h4>
+                    </h:form>
                 </div>
             </div>
             <div id="middle_content">
