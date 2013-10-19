@@ -15,8 +15,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface ResearchService {
-    public int createResearchProject(Research research, Collaborator collaborator, User user) throws NoResearchFoundException;
+    public int createResearchProject(Research research, Collaborator collaborator, int userId) throws NoResearchFoundException;
     public Research findResearchBy(int research_id);
     public List<Research> findResearchList(int page_number);
     public void updateResearch(Research research);
+    public List<Research> findCompleteResearchListBy(int userId);
+    public List<Research> findIncompleteResearchListBy(int userId);
 }

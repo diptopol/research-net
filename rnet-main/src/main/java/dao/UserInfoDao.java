@@ -13,4 +13,5 @@ import domain.UserInformation;
 public interface UserInfoDao {
     public void insert(User user, UserInformation information);
     public String findUserFullNameBy(int userId);
+    public UserInformation findUserInformationBy(int userId);
 }

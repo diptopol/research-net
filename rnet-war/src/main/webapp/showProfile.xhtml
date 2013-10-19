@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/19/13
+  Time: 4:04 AM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content" >
+            <fieldset id="profile">
+                <legend>#{message.personalInfo}</legend>
+                <div class="profile_item">
+                    <h:outputLabel value="#{message.registrationName} :"></h:outputLabel>
+                    <h:outputText value="#{showProfileAction.userInformation.name}"></h:outputText>
+                </div>
+                <div class="profile_item">
+                    <h:outputLabel value="#{message.registrationAddress} :"></h:outputLabel>
+                    <h:outputText value="#{showProfileAction.userInformation.address}"></h:outputText>
+                </div>
+                <div class="profile_item">
+                    <h:outputLabel value="#{message.registrationEmail} :"></h:outputLabel>
+                    <h:outputText value="#{showProfileAction.userInformation.email}"></h:outputText>
+                </div>
+                <div class="profile_item">
+                    <h:outputLabel value="#{message.registrationProfession} :"></h:outputLabel>
+                    <h:outputText value="#{showProfileAction.userInformation.profession}"></h:outputText>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>#{message.currentWorks}</legend>
+                <h:form>
+                    <h:outputText value="#{message.noData}" rendered="#{empty showProfileAction.currentResearchList}" />
+                    <p:dataTable var="research" value="#{showProfileAction.currentResearchList}" rendered="#{! empty showProfileAction.currentResearchList}">
+                        <p:column headerText="#{message.researchProjectTitle}">
+                            <h:link outcome="showResearchProject.xhtml?research_id=#{research.researchId}">
+                                <h:outputText value="#{research.researchTitle}"/>
+                            </h:link>
+                        </p:column>
+                        <p:column headerText="#{message.researchProjectCollaborators}">
+                            <ui:repeat value="#{research.collaboratorList}" var="collaborator" varStatus="loop">
+                                #{collaborator.user.userInformation.name}#{not loop.last ? ', ' : ''}
+                            </ui:repeat>
+                        </p:column>
+                        <p:column headerText="#{message.researchProjectStartingDate}">
+                            <h:outputText value="#{research.startingTime}"/>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+            </fieldset>
+            <fieldset>
+                <legend>#{message.previousWork}</legend>
+                <h:form>
+                    <h:outputText value="#{message.noData}" rendered="#{empty showProfileAction.previousResearchList}" />
+                    <p:dataTable var="research" value="#{showProfileAction.previousResearchList}" rendered="#{! empty showProfileAction.previousResearchList}">
+                        <p:column headerText="#{message.researchProjectTitle}">
+                            <h:outputText value="#{research.researchTitle}"/>
+                        </p:column>
+                        <p:column headerText="#{message.researchProjectCollaborators}">
+                            <ui:repeat value="#{research.collaboratorList}" var="collaborator" varStatus="loop">
+                                #{collaborator.user.userInformation.name}#{not loop.last ? ', ' : ''}
+                            </ui:repeat>
+                        </p:column>
+                        <p:column headerText="#{message.researchProjectStartingDate}">
+                            <h:outputText value="#{research.startingTime}"/>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+            </fieldset>
+        </ui:define>
+    </ui:composition>
+
+
+</h:body>
+
+</html>

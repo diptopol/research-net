@@ -2,6 +2,7 @@ package services;
 
 import dao.CollaboratorDao;
 import dao.ResearchDao;
+import dao.UserDao;
 import domain.Collaborator;
 import domain.Research;
 import domain.User;
@@ -28,12 +29,14 @@ public class ResearchServiceImpl implements ResearchService{
     private ResearchDao researchDao;
     @EJB
     private CollaboratorDao collaboratorDao;
+    @EJB
+    private UserDao userDao;
 
     @Override
     @TransactionAttribute
-    public int createResearchProject(Research research, Collaborator collaborator, User user) throws NoResearchFoundException{
+    public int createResearchProject(Research research, Collaborator collaborator, int userId) throws NoResearchFoundException{
+        User user = userDao.findUserBy(userId);
         int research_id = researchDao.insert(research);
-        logger.info("ResearchServiceImpl :"+research.getResearchId());
         collaboratorDao.insert(research_id, collaborator, user);
         return research_id;
     }
@@ -48,5 +51,13 @@ public class ResearchServiceImpl implements ResearchService{
 
     public void updateResearch(Research research) {
         researchDao.updateResearch(research);
+    }
+
+    public List<Research> findCompleteResearchListBy(int userId) {
+        return researchDao.findCompleteResearchListBy(userId);
+    }
+
+    public List<Research> findIncompleteResearchListBy(int userId) {
+        return researchDao.findIncompleteResearchListBy(userId);
     }
 }

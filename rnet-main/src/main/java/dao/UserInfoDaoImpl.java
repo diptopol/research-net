@@ -27,8 +27,14 @@ public class UserInfoDaoImpl implements UserInfoDao {
         entityManager.merge(user);
     }
 
+    @Override
     public String findUserFullNameBy(int userId) {
         UserInformation userInformation = entityManager.find(UserInformation.class, userId);
         return userInformation.getName();
+    }
+
+    @Override
+    public UserInformation findUserInformationBy(int userId) {
+        return entityManager.find(UserInformation.class, userId);
     }
 }

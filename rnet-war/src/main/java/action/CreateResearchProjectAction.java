@@ -13,8 +13,10 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 
 /**
@@ -28,12 +30,14 @@ import java.io.Serializable;
 @RequestScoped
 public class CreateResearchProjectAction implements Serializable {
     private static final Logger logger = LoggerFactory.getLogger(CreateResearchProjectAction.class);
-    private Research research = null;
-    private Collaborator collaborator = null;
+    private Research research;
+    private Collaborator collaborator;
+    private FacesContext facesContext;
+    private HttpSession session;
+    private int userId;
+
     @EJB
     private ResearchService researchService;
-    /*@Inject
-    private User user;*/
 
     @PostConstruct
     private void startUp() {
@@ -43,6 +47,9 @@ public class CreateResearchProjectAction implements Serializable {
         if(collaborator == null) {
             collaborator = new Collaborator();
         }
+        facesContext = FacesContext.getCurrentInstance();
+        session = (HttpSession) facesContext.getExternalContext().getSession(false);
+        userId = (Integer) session.getAttribute("userId");
     }
 
     public Research getResearch() {
@@ -62,20 +69,9 @@ public class CreateResearchProjectAction implements Serializable {
     }
 
     public String createResearchProject() {
-        /*logger.info("CreateResearch :"+research.getResearchTitle());
-        logger.info("CreateResearch :"+research.getResearchData());
-        logger.info("CreateResearch :"+new String(research.getResearchData()));
-        logger.info("CreateResearch :"+research.getStartingTime());
-        logger.info("CreateResearch :"+collaborator.getRole());*/
-
-        User user = new User();
-        user.setUserId(1);
-        user.setUsername("dipto");
-        user.setPassword("therap");
-
         research.setResearchStatus(RESEARCH_STATUS_INACTIVE);
         try {
-            int research_id = researchService.createResearchProject(research, collaborator,user);
+            int research_id = researchService.createResearchProject(research, collaborator,userId);
             return "showResearchProject.xhtml?research_id="+research_id+"&faces-redirect=true";
         }
         catch (NoResearchFoundException noResearch) {

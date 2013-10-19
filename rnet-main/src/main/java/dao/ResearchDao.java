@@ -17,4 +17,7 @@ public interface ResearchDao {
     public Research findResearchBy(int researchId);
     public List<Research> findResearchList(int page_number);
     public void updateResearch(Research research);
+    public List<Research> findCompleteResearchListBy(int userId);
+    public List<Research> findIncompleteResearchListBy(int userId);
+
 }

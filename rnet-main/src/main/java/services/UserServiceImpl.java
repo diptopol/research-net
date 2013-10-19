@@ -42,7 +42,12 @@ public class UserServiceImpl implements UserService {
         userInfoDao.insert(user, information);
     }
 
+    @Override
     public String findUserFullNameBy(int user_id) {
         return userInfoDao.findUserFullNameBy(user_id);
+    }
+    @Override
+    public UserInformation findUserInformationBy(int userId) {
+        return userInfoDao.findUserInformationBy(userId);
     }
 }

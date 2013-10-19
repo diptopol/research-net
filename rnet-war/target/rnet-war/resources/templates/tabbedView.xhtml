@@ -18,16 +18,19 @@
         <ui:define name="content" >
             <div id="left_sidebar">
                 <div class="left_menu_item" >
-                    <h4><h:link outcome="showResearchFeed.xhtml">Research Feed</h:link></h4>
+                    <h4><h:link outcome="showResearchFeed.xhtml">#{message.researchFeed}</h:link></h4>
                 </div>
                 <div class="left_menu_item" >
-                    <h4><h:link outcome="createResearchProject.xhtml">Create Research Project</h:link></h4>
+                    <h4><h:link outcome="createResearchProject.xhtml">#{message.createResearchProject}</h:link></h4>
                 </div>
                 <div class="left_menu_item" >
-                    <h4><a href="">Profile</a></h4>
+                    <h4><h:link outcome="showProfile.xhtml?user_id=#{sideMenuAction.userId}">#{message.profile}</h:link></h4>
                 </div>
                 <div class="left_menu_item" >
-                    <h4><a href="">Current Works</a></h4>
+                    <h4><h:link outcome="showCurrentWorks.xhtml?user_id=#{sideMenuAction.userId}">#{message.currentWorks}</h:link></h4>
+                </div>
+                <div class="left_menu_item" >
+                    <h4><h:link outcome="">#{message.logout}</h:link></h4>
                 </div>
             </div>
             <div id="middle_content">

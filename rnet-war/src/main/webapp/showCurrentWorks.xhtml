@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/19/13
+  Time: 1:01 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content">
+            <fieldset>
+                <legend>#{message.currentWorks}</legend>
+                <h:form>
+                    <h:outputText value="#{message.noData}" rendered="#{empty showCurrentWorksAction.currentResearchList}" />
+                    <p:dataTable var="research" value="#{showCurrentWorksAction.currentResearchList}" rendered="#{! empty showCurrentWorksAction.currentResearchList}">
+                        <p:column headerText="#{message.researchProjectTitle}">
+                            <h:link outcome="showResearchProject.xhtml?research_id=#{research.researchId}">
+                                <h:outputText value="#{research.researchTitle}"/>
+                            </h:link>
+                        </p:column>
+                        <p:column headerText="#{message.researchProjectCollaborators}">
+                            <ui:repeat value="#{research.collaboratorList}" var="collaborator" varStatus="loop">
+                                #{collaborator.user.userInformation.name}#{not loop.last ? ', ' : ''}
+                            </ui:repeat>
+                        </p:column>
+                        <p:column headerText="#{message.researchProjectStartingDate}">
+                            <h:outputText value="#{research.startingTime}"/>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+            </fieldset>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+
+</html>

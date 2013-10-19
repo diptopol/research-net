@@ -10,7 +10,10 @@ import services.UserService;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 
 /**
@@ -24,9 +27,13 @@ import java.io.Serializable;
 @SessionScoped
 public class LoginAction implements Serializable{
     private static final Logger logger = LoggerFactory.getLogger(LoginAction.class);
+    private User user = null;
+    private FacesContext facesContext;
+    private ExternalContext externalContext;
+    private HttpSession session;
     @EJB
     private UserService userService;
-    private User user = null;
+
 
     public User getUser() {
         return user;
@@ -47,6 +54,10 @@ public class LoginAction implements Serializable{
         try {
             logger.info("login :"+user.getUsername());
             user = userService.getValidUserBy(user);
+            facesContext = FacesContext.getCurrentInstance();
+            externalContext = facesContext.getExternalContext();
+            session = (HttpSession) externalContext.getSession(true);
+            session.setAttribute("userId", user.getUserId());
             return "createResearchProject.xhtml?faces-redirect=true";
         }
         catch (NoUserFoundException noUser) {

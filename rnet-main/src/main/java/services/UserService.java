@@ -19,4 +19,5 @@ public interface UserService {
     public User getValidUserBy(User user) throws NoUserFoundException;
     public void addNewUser(User user, UserInformation information) throws NoUserFoundException;
     public String findUserFullNameBy(int user_id);
+    public UserInformation findUserInformationBy(int userId);
 }

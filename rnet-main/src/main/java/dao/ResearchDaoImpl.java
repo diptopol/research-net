@@ -1,6 +1,8 @@
 package dao;
 
 import static utils.ConstantValues.RESEARCH_LIST_LIMIT;
+import static utils.ConstantValues.RESEARCH_STATUS_COMPLETE;
+
 import domain.Research;
 import exceptions.NoResearchFoundException;
 import org.slf4j.Logger;
@@ -66,5 +68,23 @@ public class ResearchDaoImpl implements ResearchDao {
     @Override
     public void updateResearch(Research research) {
         entityManager.merge(research);
+    }
+
+    public List<Research> findCompleteResearchListBy(int userId) {
+        return entityManager.createQuery("SELECT research FROM Research research " +
+                "LEFT JOIN FETCH research.collaboratorList collaborator " +
+                "WHERE research.researchStatus =:status AND collaborator.user.userId =:id ORDER BY research.startingTime DESC ")
+                .setParameter("status", RESEARCH_STATUS_COMPLETE)
+                .setParameter("id", userId)
+                .getResultList();
+    }
+
+    public List<Research> findIncompleteResearchListBy(int userId) {
+        return entityManager.createQuery("SELECT research FROM Research research " +
+                "LEFT JOIN FETCH research.collaboratorList collaborator " +
+                "WHERE research.researchStatus !=:status AND collaborator.user.userId =:id ORDER BY research.startingTime DESC ")
+                .setParameter("status", RESEARCH_STATUS_COMPLETE)
+                .setParameter("id", userId)
+                .getResultList();
     }
 }
