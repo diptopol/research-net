@@ -59,7 +59,7 @@ public class LoginAction implements Serializable{
             externalContext = facesContext.getExternalContext();
             session = (HttpSession) externalContext.getSession(true);
             session.setAttribute("userId", user.getUserId());
-            return "createResearchProject.xhtml?faces-redirect=true";
+            return "showResearchFeed.xhtml?faces-redirect=true";
         }
         catch (NoUserFoundException noUser) {
             return "login.xhtml?error=no_user&faces-redirect=true";

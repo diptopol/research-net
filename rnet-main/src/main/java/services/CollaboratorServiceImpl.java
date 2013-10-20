@@ -1,7 +1,9 @@
 package services;
 
 import dao.CollaboratorDao;
+import dao.UserDao;
 import domain.Collaborator;
+import domain.User;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -18,6 +20,8 @@ import java.util.List;
 public class CollaboratorServiceImpl implements CollaboratorService {
     @EJB
     private CollaboratorDao collaboratorDao;
+    @EJB
+    private UserDao userDao;
     @Override
     public List<Collaborator> findCollaboratorsBy(int research_id) {
         return collaboratorDao.findCollaboratorsBy(research_id);
@@ -25,5 +29,10 @@ public class CollaboratorServiceImpl implements CollaboratorService {
 
     public Collaborator findCollaboratorBy(int researchId, int userId) {
          return collaboratorDao.findCollaboratorBy(researchId, userId);
+    }
+
+    public void CollaboratorInsert(int research_id, Collaborator collaborator, int userId) {
+        User user = userDao.findUserBy(userId);
+        collaboratorDao.insert(research_id, collaborator, user);
     }
 }

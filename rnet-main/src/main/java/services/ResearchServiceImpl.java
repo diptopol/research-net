@@ -63,9 +63,9 @@ public class ResearchServiceImpl implements ResearchService{
     public List<Research> findIncompleteResearchListBy(int userId) {
         return researchDao.findIncompleteResearchListBy(userId);
     }
-    @Schedule(dayOfWeek = "0-7", hour = "*", minute = "*")
+    @Schedule(dayOfWeek = "*")
     @TransactionAttribute
     public void makeResearchActive() {
-        logger.info("MakeResearchActive");
+        researchDao.makeResearchActive();
     }
 }

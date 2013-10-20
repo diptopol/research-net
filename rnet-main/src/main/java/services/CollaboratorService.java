@@ -14,4 +14,5 @@ import java.util.List;
 public interface CollaboratorService {
     public List<Collaborator> findCollaboratorsBy(int research_id);
     public Collaborator findCollaboratorBy(int researchId, int userId);
+    public void CollaboratorInsert(int research_id, Collaborator collaborator, int userId);
 }

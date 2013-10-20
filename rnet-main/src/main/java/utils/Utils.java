@@ -21,7 +21,7 @@ public class Utils {
         else return false;
     }
 
-    public static boolean isUserEligibleToJoin(int userId, List<Collaborator> collaboratorList) {
+    public static boolean isNotACollaborator(int userId, List<Collaborator> collaboratorList) {
 
         boolean isNotACollaborator = true;
         for(Collaborator collaborator: collaboratorList) {
@@ -33,6 +33,9 @@ public class Utils {
         }
         return isNotACollaborator;
     }
+
+
+
 
     public static Date getSystemDate() {
         return Calendar.getInstance().getTime();

@@ -19,7 +19,7 @@
     <ui:composition template="resources/templates/tabbedView.xhtml" >
         <ui:define name="middle_content">
             <h:form id="menuform">
-                <p:tabMenu activeIndex="0">
+                <p:tabMenu activeIndex="0" rendered="#{showResearchProjectAction.menuVisible}">
                     <p:menuitem value="OverView" outcome="showResearchProject.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                     <p:menuitem value="Workboard" outcome="showWorkBoard.xhtml?research_id=#{showMilestoneAction.researchId}"/>
                     <p:menuitem value="Milestone" outcome="showMilestone.xhtml?research_id=#{showMilestoneAction.researchId}"/>
@@ -68,7 +68,9 @@
                 <p:row rendered="#{showResearchProjectAction.visible}">
                         <p:column colspan="20"></p:column>
                         <p:column>
-                            <h:button value="#{message.researchProjectJoinMessage}" />
+                            <h:form>
+                                <h:button value="#{message.researchProjectJoinMessage}" outcome="joinAsCollaborator.xhtml?research_id=#{showResearchProjectAction.researchId}"/>
+                            </h:form>
                         </p:column>
                 </p:row>
             </p:panelGrid>

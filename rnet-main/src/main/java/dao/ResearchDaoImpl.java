@@ -1,6 +1,7 @@
 package dao;
 
 import static utils.ConstantValues.RESEARCH_LIST_LIMIT;
+import static utils.ConstantValues.RESEARCH_STATUS_ACTIVE;
 import static utils.ConstantValues.RESEARCH_STATUS_COMPLETE;
 import static utils.Utils.getSystemDate;
 
@@ -87,6 +88,17 @@ public class ResearchDaoImpl implements ResearchDao {
                 .setParameter("status", RESEARCH_STATUS_COMPLETE)
                 .setParameter("id", userId)
                 .getResultList();
+    }
+
+    public void makeResearchActive() {
+        Date today = getSystemDate();
+        List<Research> researchList = entityManager.createQuery("SELECT research FROM Research research WHERE research.startingTime =:date")
+                .setParameter("date", today).getResultList();
+
+        for(Research research:researchList) {
+            research.setResearchStatus(RESEARCH_STATUS_ACTIVE);
+            entityManager.merge(research);
+        }
     }
 
 

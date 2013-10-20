@@ -65,7 +65,7 @@ public class RegisterAction {
             noUser.printStackTrace();
         }
 
-        return "login";
+        return "login.xhtml?faces-redirect=true";
     }
 
 

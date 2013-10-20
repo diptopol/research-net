@@ -35,11 +35,10 @@ public class SessionFilter implements Filter {
         request = (HttpServletRequest) servletRequest;
         response = (HttpServletResponse) servletResponse;
         session = request.getSession(false);
-
-
         requestedUrl = request.getRequestURI().toString();
+
         logger.info("SessionFilter :"+requestedUrl);
-        if ((session == null || session.getAttribute("userId") == null) && !requestedUrl.contains("login.xhtml") && !requestedUrl.contains("javax.faces.resource")) {
+        if (isSessionInvalid(session) && !containsNonSecurePages(requestedUrl)) {
             response.sendRedirect("login.xhtml");
         } else {
             filterChain.doFilter(request, response);
@@ -49,5 +48,19 @@ public class SessionFilter implements Filter {
     @Override
     public void destroy() {
 
+    }
+
+    private boolean containsNonSecurePages(String url) {
+        if(url.contains("login.xhtml")  || url.contains("registration.xhtml") || url.contains("javax.faces.resource")) {
+            return true;
+        }
+        else return false;
+    }
+
+    private boolean isSessionInvalid(HttpSession session) {
+        if(session == null || session.getAttribute("userId") == null) {
+            return true;
+        }
+        else return false;
     }
 }

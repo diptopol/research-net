@@ -13,7 +13,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core">
+        >
 
 <h:body>
     <ui:composition template="resources/templates/tabbedView.xhtml" >
@@ -21,23 +21,23 @@
             <fieldset id="profile">
                 <legend>#{message.personalInfo}</legend>
                 <div class="profile_item">
-                    <h:outputLabel value="#{message.registrationName} :"></h:outputLabel>
+                    <h:outputLabel value="#{message.registrationName} : "></h:outputLabel>
                     <h:outputText value="#{showProfileAction.userInformation.name}"></h:outputText>
                 </div>
                 <div class="profile_item">
-                    <h:outputLabel value="#{message.registrationAddress} :"></h:outputLabel>
+                    <h:outputLabel value="#{message.registrationAddress} : "></h:outputLabel>
                     <h:outputText value="#{showProfileAction.userInformation.address}"></h:outputText>
                 </div>
                 <div class="profile_item">
-                    <h:outputLabel value="#{message.registrationEmail} :"></h:outputLabel>
+                    <h:outputLabel value="#{message.registrationEmail} : "></h:outputLabel>
                     <h:outputText value="#{showProfileAction.userInformation.email}"></h:outputText>
                 </div>
                 <div class="profile_item">
-                    <h:outputLabel value="#{message.registrationProfession} :"></h:outputLabel>
+                    <h:outputLabel value="#{message.registrationProfession} : "></h:outputLabel>
                     <h:outputText value="#{showProfileAction.userInformation.profession}"></h:outputText>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset id="currentWorks">
                 <legend>#{message.currentWorks}</legend>
                 <h:form>
                     <h:outputText value="#{message.noData}" rendered="#{empty showProfileAction.currentResearchList}" />
@@ -58,7 +58,7 @@
                     </p:dataTable>
                 </h:form>
             </fieldset>
-            <fieldset>
+            <fieldset id="previousWorks">
                 <legend>#{message.previousWork}</legend>
                 <h:form>
                     <h:outputText value="#{message.noData}" rendered="#{empty showProfileAction.previousResearchList}" />

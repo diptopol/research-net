@@ -1,5 +1,6 @@
 package action;
 
+import static utils.ConstantValues.RESEARCH_STATUS_ACTIVE;
 import domain.Collaborator;
 import domain.Research;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 import static utils.Utils.isJoiningDateRemains;
-import static utils.Utils.isUserEligibleToJoin;
+import static utils.Utils.isNotACollaborator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,6 +40,7 @@ public class ShowResearchProjectAction {
     private List<String> collaboratorNameList;
     private HttpSession session;
     private int userId;
+    private Collaborator newCollaborator;
 
     @EJB
     private ResearchService researchService;
@@ -47,6 +49,13 @@ public class ShowResearchProjectAction {
     @EJB
     private UserService userService;
 
+    public int getResearchId() {
+        return researchId;
+    }
+
+    public void setResearchId(int researchId) {
+        this.researchId = researchId;
+    }
 
     public List<String> getCollaboratorNameList() {
         return collaboratorNameList;
@@ -67,22 +76,32 @@ public class ShowResearchProjectAction {
         userId = (Integer) session.getAttribute("userId");
 
         Map<String,String> parameterMap = facesContext.getExternalContext().getRequestParameterMap();
-        researchId = Integer.parseInt(parameterMap.get("research_id"));
-
-        research = researchService.findResearchBy(researchId);
-        collaboratorList = collaboratorService.findCollaboratorsBy(researchId);
-        collaboratorNameList = new ArrayList<String>();
-        for(Collaborator collaborator: collaboratorList) {
-            int userId = collaborator.getUser().getUserId();
-            String fullName = userService.findUserFullNameBy(userId);
-            collaboratorNameList.add(fullName);
+        if(parameterMap.containsKey("research_id"))   {
+            researchId = Integer.parseInt(parameterMap.get("research_id"));
+            research = researchService.findResearchBy(researchId);
+            collaboratorList = collaboratorService.findCollaboratorsBy(researchId);
+            collaboratorNameList = new ArrayList<String>();
+            for(Collaborator collaborator: collaboratorList) {
+                int userId = collaborator.getUser().getUserId();
+                String fullName = userService.findUserFullNameBy(userId);
+                collaboratorNameList.add(fullName);
+            }
         }
+    }
 
+    public boolean isMenuVisible() {
+
+        if(research.getResearchStatus().equals(RESEARCH_STATUS_ACTIVE) && !isNotACollaborator(userId, collaboratorList)) {
+             return true;
+        }
+        else return false;
     }
 
     public boolean isVisible() {
-        if(isJoiningDateRemains(research.getStartingTime()) && isUserEligibleToJoin(userId, collaboratorList))
+        if(isJoiningDateRemains(research.getStartingTime()) && isNotACollaborator(userId, collaboratorList))
             return true;
         else return false;
     }
+
+
 }

@@ -30,6 +30,7 @@ public class CollaboratorDaoImpl implements CollaboratorDao {
     public void insert(int research_id, Collaborator collaborator, User user) {
         Research research = entityManager.find(Research.class, research_id);
         collaborator.setResearch(research);
+
         List<Collaborator> collaboratorListForResearch = research.getCollaboratorList();
         if(collaboratorListForResearch == null) {
             collaboratorListForResearch = new ArrayList<Collaborator>();

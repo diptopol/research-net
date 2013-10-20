@@ -17,7 +17,8 @@
 <h:body>
     <ui:composition template="resources/templates/tabbedView.xhtml" >
         <ui:define name="middle_content">
-            <h:outputText value="#{message.noData}" rendered="#{empty showResearchFeedAction.researchList}"/>
+            <h:outputText styleClass="researchfeed_item" value="#{message.researchFeedMessage}"/>
+            <h:outputText styleClass="researchfeed_item" value="#{message.noData}" rendered="#{empty showResearchFeedAction.researchList}"/>
             <ui:repeat var="research" value="#{showResearchFeedAction.researchList}">
                 <div class="researchfeed_item">
                     <div>

@@ -30,7 +30,8 @@ import static org.junit.Assert.assertNotNull;
  * Time: 1:30 PM
  * To change this template use File | Settings | File Templates.
  */
-/*@RunWith(Arquillian.class)
+/*
+@RunWith(Arquillian.class)
 public class TestUserDao {
     @PersistenceContext
     EntityManager entityManager;
@@ -107,4 +108,5 @@ public class TestUserDao {
     }
 
 
-}*/
+}
+*/

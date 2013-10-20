@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: diptopol
+  Date: 10/20/13
+  Time: 12:57 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+    <ui:composition template="resources/templates/tabbedView.xhtml" >
+        <ui:define name="middle_content">
+            <fieldset>
+                <legend>JoinForm</legend>
+                #{message.researchProjectTitle} :<br/>
+                <h:outputText cols="50" value="#{joinAsCollaboratorAction.research.researchTitle}"/> <br/>
+                <h:form>
+                    #{message.researchProjectRole} :
+
+                    <p:selectOneRadio  value="#{joinAsCollaboratorAction.collaborator.role}" rendered="#{joinAsCollaboratorAction.eligibleForMentor}">
+                        <f:selectItem itemLabel="#{message.researchProjectRoleAsMentor}" itemValue="mentor" />
+                        <f:selectItem itemLabel="#{message.researchProjectRoleAsCollaborator}" itemValue="collaborator" />
+                    </p:selectOneRadio>
+
+                    <p:selectOneRadio  value="#{joinAsCollaboratorAction.collaborator.role}" rendered="#{ !joinAsCollaboratorAction.eligibleForMentor}">
+                        <f:selectItem itemLabel="#{message.researchProjectRoleAsCollaborator}" itemValue="collaborator" />
+                    </p:selectOneRadio>
+
+                    <h:commandButton value="#{message.researchProjectJoinMessage}" action="#{joinAsCollaboratorAction.joinAsCollaborator}">
+                          <f:param name="research_id" value="#{joinAsCollaboratorAction.research.researchId}" />
+                    </h:commandButton>
+                </h:form>
+            </fieldset>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

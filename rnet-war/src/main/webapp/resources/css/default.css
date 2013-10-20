@@ -1,8 +1,8 @@
 body {
     font-weight: normal;
     font-family:Arial, Helvetica, sans-serif;
+    height: 100%;
 }
-
 
 #header {
     position: relative;
@@ -54,6 +54,24 @@ body {
 .left_menu_item h4:hover a{
     color: #fff;
 }
+
+#profile {
+    margin: 20px;
+}
+
+.profile_item {
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+#currentWorks {
+    margin:20px;
+}
+
+#previousWorks {
+    margin: 20px;
+}
+
 
 #previousReports {
     width: 60%;
@@ -117,6 +135,8 @@ body {
     margin-right: auto;
     border: 1px solid #000000;
     width: 60%;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .researchfeed_item div {
