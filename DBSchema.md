@@ -1,0 +1,1 @@
+Here is the DB Schema [https://docs.google.com/file/d/0B3HY2LeaaBrYRVlfdEwzbERSeHM/edit?usp=sharing]
